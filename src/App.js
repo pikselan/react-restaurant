@@ -1,6 +1,8 @@
 import React from "react";
 import "./assets/scss/styles.scss";
 import Logo from "./assets/images/logo.png";
+import HeroImage from "./assets/images/hero-image.jpg";
+import HeroBg from "./assets/images/hero-bg.jpg";
 // import $ from "jquery";
 // import "./assets/js/index";
 
@@ -50,7 +52,13 @@ function App() {
           </div>
         </nav>
         <section className="hero row">
-          <div className="hero-text col-md-6 pt-5">
+          <div
+            className="hero-text col-md-6 pt-5"
+            style={{
+              background: `url(${HeroBg}) no-repeat`,
+              backgroundSize: "100% auto",
+            }}
+          >
             <h1 className="display-3 mt-5 text-primary">
               “Treasure Every Encounter, For It Will Never Recur.”
             </h1>
@@ -64,7 +72,14 @@ function App() {
             </button>
             <button className="btn btn-info mt-5">Our Menu</button>
           </div>
-          <div className="hero-image col-md-6">Image</div>
+          <div className="hero-image col-md-6">
+            <img
+              className="v-100"
+              style={{ maxHeight: "806px" }}
+              src={HeroImage}
+              alt=""
+            />
+          </div>
         </section>
       </header>
       <section className="content-base container-fluid bg-base">
