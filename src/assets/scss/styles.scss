@@ -1,0 +1,61 @@
+/*!
+ * Bootstrap v4.5.0 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Poppins:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+@import "colors";
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "utilities";
+@import "print";
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+
+.v-max {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+h1,
+.nav-item {
+  font-family: "Alegreya", serif;
+}
