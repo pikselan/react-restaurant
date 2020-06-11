@@ -104,3 +104,25 @@ h1,
     }
   }
 }
+
+.about {
+  height: 90vh;
+  overflow-y: hidden;
+  .about-margin {
+    // margin-top: -5rem;
+    .about-2 {
+      margin-top: -5rem;
+      width: 445px;
+    }
+    .about-1 {
+      bottom: 0;
+      left: 0;
+      margin-bottom: 5rem;
+    }
+    .about-3 {
+      bottom: 0;
+      right: 0;
+      margin-bottom: 8rem;
+    }
+  }
+}

@@ -7,6 +7,8 @@ import Plate2 from "./assets/images/plate-2.png";
 import HeroBg from "./assets/images/hero-bg.svg";
 import MenuBg from "./assets/images/menu-bg.svg";
 import ListBg from "./assets/images/list-bg.svg";
+import AboutBg from "./assets/images/about-bg.svg";
+import ReviewBg from "./assets/images/review-bg.svg";
 import IcFacebook from "./assets/images/ic-facebook.svg";
 import IcInstagram from "./assets/images/ic-instagram.svg";
 import IcTwitter from "./assets/images/ic-twitter.svg";
@@ -17,6 +19,14 @@ import Food1 from "./assets/images/food-1.png";
 import Food2 from "./assets/images/food-2.png";
 import Food3 from "./assets/images/food-3.png";
 import Food4 from "./assets/images/food-4.png";
+import About1 from "./assets/images/about-1.png";
+import About2 from "./assets/images/about-2.png";
+import About3 from "./assets/images/about-3.png";
+import IcPhone from "./assets/images/ic-star.svg";
+import IcPhone from "./assets/images/ic-left.svg";
+import IcPhone from "./assets/images/ic-right.svg";
+import ToTop from "./assets/images/to-top.svg";
+
 // import $ from "jquery";
 // import "./assets/js/index";
 
@@ -98,7 +108,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="hero-image col-md-6 h-100">
+          <div className="hero-image col-md-6 h-100 row">
             <div className="plate-under mx-auto">
               <img
                 style={{ maxHeight: "806px" }}
@@ -199,9 +209,61 @@ function App() {
           </div>
         </section>
       </section>
-      <section className="container-fluid v-max">about</section>
+      <section
+        className="about container-fluid"
+        style={{
+          background: `url(${AboutBg}) no-repeat`,
+          backgroundSize: "100% auto",
+        }}
+      >
+        <div className="about-margin container">
+          <div className="row">
+            <div className="col-md-4">
+              <h1 className="display-4 text-primary mt-5 pt-5">
+                KAIKAYA BY THE SEA
+              </h1>
+              <h2 className="h4 mt-4 text-gray">
+                In some country, there is a port town. In this tow, there is a
+                restaurant. Owned by a mysterius Japanese man, who cooks
+                marvelous seafood dishes.
+              </h2>
+              <button className="btn btn-info mt-5">About Us</button>
+            </div>
+            <div className="col-md-8 row">
+              <div className="about-2 mx-auto">
+                <img style={{ maxHeight: "725px" }} src={About2} alt="About2" />
+              </div>
+
+              <img
+                className="about-1 position-absolute"
+                style={{ maxHeight: "221px" }}
+                src={About1}
+                alt="About1"
+              />
+              <img
+                className="about-3 position-absolute"
+                style={{ maxHeight: "285px" }}
+                src={About3}
+                alt="About3"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="container-fluid v-max">
-        <section className="container">review</section>
+        <section className="container border-bottom">
+          <div className="row">
+            <div className="col-1">left</div>
+            <div className="col-10">
+              <div className="col-12">star</div>
+              <div className="col-12">tittle</div>
+              <div className="col-12">text</div>
+              <div className="col-12">name</div>
+              <div className="col-12">icon</div>
+            </div>
+            <div className="col-1">right</div>
+          </div>
+        </section>
         <footer className="container-fluid">footer</footer>
       </section>
     </div>
