@@ -60,7 +60,24 @@ h1,
   font-family: "Alegreya", serif;
 }
 
+nav {
+  ul {
+    .nav-item {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+}
+
 .hero {
+  .hero-text {
+    height: 83vh;
+  }
+  .hero-icon {
+    bottom: 0px;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
   .hero-image {
     .plate-under {
       width: 445px;
@@ -79,8 +96,8 @@ h1,
 }
 
 .content-base {
-  margin-top: -10rem;
-  padding-top: 10rem;
+  margin-top: -15vh;
+  padding-top: 15vh;
   .item-menu {
     margin-top: 9rem;
   }
