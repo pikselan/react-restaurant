@@ -59,3 +59,48 @@ h1,
 .nav-item {
   font-family: "Alegreya", serif;
 }
+
+.hero {
+  .hero-image {
+    .plate-under {
+      width: 445px;
+    }
+    .plate-1 {
+      top: 0;
+      right: 0;
+      margin-top: 30px;
+    }
+    .plate-2 {
+      bottom: 0;
+      left: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.content-base {
+  margin-top: -10rem;
+  padding-top: 10rem;
+  .item-menu {
+    margin-top: 9rem;
+  }
+  .item-list {
+    .row {
+      .card {
+        border: none;
+        margin-top: 7rem;
+        height: 300px;
+        border-radius: 0px 50px;
+        img {
+          margin-top: -7rem;
+        }
+        h4 {
+          margin-top: 1rem;
+        }
+        .card-body {
+          margin-top: -1rem;
+        }
+      }
+    }
+  }
+}
