@@ -40,7 +40,7 @@ function App() {
             <img
               src={Logo}
               alt="Kaikaya By The Sea"
-              style={{ height: "10vh", maxWidth: "212px" }}
+              style={{ height: "10vh", maxWidth: "212px", maxHeight: "100px" }}
             />
           </Link>
           <button
@@ -93,6 +93,92 @@ function App() {
             Book a Table
           </Link>
         </nav>
+        <div className="hero row">
+          <div className="hero-text col-12 col-md-8 col-lg-6">
+            <div
+              className="hero-title"
+              style={{
+                background: `url(${HeroBg}) no-repeat`,
+                backgroundSize: "100% auto",
+              }}
+            >
+              <h1 className="hero-h1 h2 text-primary font-weight-bold d-sm-block d-lg-none">
+                “Treasure Every Encounter, For It Will Never Recur.”
+              </h1>
+              <h1 className="hero-h1 display-3 text-primary font-weight-bold d-none d-lg-block">
+                “Treasure Every Encounter, For It Will Never Recur.”
+              </h1>
+              <h2 className="mt-4 h6 d-sm-block d-lg-none">
+                You are “by the ocean” wherever you are, For Japan is surrounded
+                by the ocean. Fish caught in the morning is on the table in the
+                evening.
+              </h2>
+              <h2 className="mt-4 h2 d-none d-lg-block">
+                You are “by the ocean” wherever you are, For Japan is surrounded
+                by the ocean. Fish caught in the morning is on the table in the
+                evening.
+              </h2>
+              <Link to={`/`} className="btn btn-primary d-md-none mr-3 mt-4">
+                Book a Table
+              </Link>
+              <Link tp={`/`} className="btn btn-info mt-4">
+                Our Menu
+              </Link>
+            </div>
+            <div className="hero-icon row position-absolute w-100">
+              <Link to={`/`}>
+                <img src={IcFacebook} alt="Facebook" />
+              </Link>
+              <Link to={`/`}>
+                <img src={IcTwitter} alt="Twitter" className="ml-3" />
+              </Link>
+              <Link to={`/`}>
+                <img src={IcInstagram} alt="Instagram" className="ml-3" />
+              </Link>
+              <Link to={`/`}>
+                <img
+                  src={IcTripadvisor}
+                  alt="Tripadvisor"
+                  className="ml-3 d-none d-xl-block"
+                />
+                <img
+                  src={IcTripadvisorMini}
+                  alt="Tripadvisor"
+                  className="ml-3 d-block d-xl-none"
+                />
+              </Link>
+              <Link
+                to={`tel:+81337700878`}
+                className="row border-left text-decoration-none ml-3 pl-3"
+              >
+                <img src={IcPhone} alt="Phone" />
+                <h5 className="ml-3 my-2 d-none d-lg-block">+81-3-3770-0878</h5>
+              </Link>
+            </div>
+          </div>
+          <div className="hero-image col-12 col-md-4 col-lg-6">
+            {/* <div className="plate-under mx-auto">
+              <img
+                style={{ maxHeight: "806px", height: "84vh" }}
+                src={PlateUnder}
+                alt="Front Store"
+              />
+
+              <img
+                className="plate-2 position-absolute"
+                style={{ maxHeight: "386px", height: "24vw" }}
+                src={Plate2}
+                alt="Food 2"
+              />
+              <img
+                className="plate-1 position-absolute"
+                style={{ maxHeight: "350px", height: "22vw" }}
+                src={Plate1}
+                alt="Food 1"
+              />
+            </div> */}
+          </div>
+        </div>
       </header>
       <section className="content-base container-fluid bg-base">
         <section

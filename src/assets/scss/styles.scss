@@ -75,11 +75,17 @@ nav {
 .hero {
   .hero-text {
     height: 83vh;
-  }
-  .hero-icon {
-    bottom: 0px;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+    .hero-title {
+      height: 72vh;
+      .hero-h1 {
+        padding-top: 4vw;
+      }
+    }
+    .hero-icon {
+      bottom: 0px;
+      margin-left: 0;
+      margin-bottom: 1rem;
+    }
   }
   .hero-image {
     .plate-under {
