@@ -72,6 +72,12 @@ nav {
   }
 }
 
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero {
   .hero-text {
     height: 83vh;
@@ -112,11 +118,6 @@ nav {
 .content-base {
   margin-top: -15vh;
   padding-top: 15vh;
-  .middle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .item-list {
     .row {
       .card {
@@ -143,12 +144,17 @@ nav {
 }
 
 .about {
-  height: 90vh;
+  height: 100vh;
   overflow-y: hidden;
+  padding-right: 0;
+  padding-left: 0;
+  .space-base {
+    height: 20vh;
+  }
   .about-margin {
-    // margin-top: -5rem;
+    margin-top: -5rem;
+    height: 80vh;
     .about-2 {
-      margin-top: -5rem;
       width: 445px;
     }
     .about-1 {

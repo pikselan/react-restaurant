@@ -114,7 +114,7 @@ function App() {
                 <Link to={`/`} className="btn btn-primary d-md-none mr-3 mt-4">
                   Book a Table
                 </Link>
-                <Link tp={`/`} className="btn btn-info mt-4 mr-auto">
+                <Link to={`/`} className="btn btn-info mt-4 mr-auto">
                   Our Menu
                 </Link>
               </div>
@@ -204,7 +204,9 @@ function App() {
                   Western food. The dishes are mainly made from fish delivered
                   directly from the sea by the owner
                 </h2>
-                <button className="btn btn-info mt-4">Check Menu</button>
+                <Link to={`/`} className="btn btn-info mt-4">
+                  Check Menu
+                </Link>
               </div>
             </div>
           </div>
@@ -265,59 +267,72 @@ function App() {
                 </div>
               </div>
               <div className="col-12">
-                <button className="btn btn-info mt-4">Other Foods</button>
+                <Link to={`/`} className="btn btn-info mt-4">
+                  Other Foods
+                </Link>
               </div>
             </div>
           </div>
         </section>
       </section>
-      <section
-        className="about container-fluid"
-        style={{
-          background: `url(${AboutBg}) no-repeat center`,
-          backgroundSize: "100% auto",
-        }}
-      >
-        <div className="about-margin container">
-          <div className="row">
-            <div className="col-md-4">
-              <h1 className="h3 text-primary d-sm-block d-lg-none">
-                KAIKAYA <br />
-                By The Sea
-              </h1>
-              <h1 className="display-4 text-primary d-none d-lg-block">
-                KAIKAYA <br />
-                By The Sea
-              </h1>
-              <h2 className="h6 mt-4 text-gray d-sm-block d-lg-none">
-                In some country, there is a port town. In this tow, there is a
-                restaurant. Owned by a mysterius Japanese man, who cooks
-                marvelous seafood dishes.
-              </h2>
-              <h2 className="h4 mt-4 text-gray d-none d-lg-block">
-                In some country, there is a port town. In this tow, there is a
-                restaurant. Owned by a mysterius Japanese man, who cooks
-                marvelous seafood dishes.
-              </h2>
-              <button className="btn btn-info mt-4">About Us</button>
-            </div>
-            <div className="col-md-8 row">
-              <div className="about-2 mx-auto">
-                <img style={{ maxHeight: "725px" }} src={About2} alt="About2" />
+      <section className="about container-fluid">
+        <div className="space-base container-fluid bg-base"></div>
+        <div
+          className="container-fluid"
+          style={{
+            background: `url(${AboutBg}) no-repeat center`,
+            backgroundSize: "100% auto",
+          }}
+        >
+          <div className="about-margin container">
+            <div className="row h-100">
+              <div className="col-md-4 middle">
+                <div className="row">
+                  <h1 className="h3 text-primary d-sm-block d-lg-none">
+                    KAIKAYA <br />
+                    By The Sea
+                  </h1>
+                  <h1 className="display-4 text-primary d-none d-lg-block">
+                    KAIKAYA <br />
+                    By The Sea
+                  </h1>
+                  <h2 className="h6 mt-4 text-gray d-sm-block d-lg-none">
+                    In some country, there is a port town. In this tow, there is
+                    a restaurant. Owned by a mysterius Japanese man, who cooks
+                    marvelous seafood dishes.
+                  </h2>
+                  <h2 className="h4 mt-4 text-gray d-none d-lg-block">
+                    In some country, there is a port town. In this tow, there is
+                    a restaurant. Owned by a mysterius Japanese man, who cooks
+                    marvelous seafood dishes.
+                  </h2>
+                  <Link to={`/`} className="btn btn-info mt-4">
+                    About Us
+                  </Link>
+                </div>
               </div>
+              <div className="col-md-8 row d-none d-md-block">
+                <div className="about-2 mx-auto">
+                  <img
+                    style={{ maxHeight: "725px", height: "74vh" }}
+                    src={About2}
+                    alt="About2"
+                  />
+                </div>
 
-              <img
-                className="about-1 position-absolute"
-                style={{ maxHeight: "221px" }}
-                src={About1}
-                alt="About1"
-              />
-              <img
-                className="about-3 position-absolute"
-                style={{ maxHeight: "285px" }}
-                src={About3}
-                alt="About3"
-              />
+                <img
+                  className="about-1 position-absolute"
+                  style={{ maxHeight: "221px", height: "12vw" }}
+                  src={About1}
+                  alt="About1"
+                />
+                <img
+                  className="about-3 position-absolute"
+                  style={{ maxHeight: "285px", height: "15vw" }}
+                  src={About3}
+                  alt="About3"
+                />
+              </div>
             </div>
           </div>
         </div>
