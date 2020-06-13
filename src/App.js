@@ -79,14 +79,6 @@ function App() {
                   Contact
                 </Link>
               </li>
-              <li className="nav-item d-block d-md-none">
-                <Link
-                  to={`/`}
-                  className="nav-link text-primary font-weight-bold"
-                >
-                  Book a Table
-                </Link>
-              </li>
             </ul>
           </div>
           <Link to={`/`} className="btn btn-primary d-none d-md-block">
@@ -96,34 +88,36 @@ function App() {
         <div className="hero row">
           <div className="hero-text col-12 col-md-8 col-lg-6">
             <div
-              className="hero-title"
+              className="hero-bg"
               style={{
-                background: `url(${HeroBg}) no-repeat`,
+                background: `url(${HeroBg}) no-repeat center`,
                 backgroundSize: "100% auto",
               }}
             >
-              <h1 className="hero-h1 h2 text-primary font-weight-bold d-sm-block d-lg-none">
-                “Treasure Every Encounter, For It Will Never Recur.”
-              </h1>
-              <h1 className="hero-h1 display-3 text-primary font-weight-bold d-none d-lg-block">
-                “Treasure Every Encounter, For It Will Never Recur.”
-              </h1>
-              <h2 className="mt-4 h6 d-sm-block d-lg-none">
-                You are “by the ocean” wherever you are, For Japan is surrounded
-                by the ocean. Fish caught in the morning is on the table in the
-                evening.
-              </h2>
-              <h2 className="mt-4 h2 d-none d-lg-block">
-                You are “by the ocean” wherever you are, For Japan is surrounded
-                by the ocean. Fish caught in the morning is on the table in the
-                evening.
-              </h2>
-              <Link to={`/`} className="btn btn-primary d-md-none mr-3 mt-4">
-                Book a Table
-              </Link>
-              <Link tp={`/`} className="btn btn-info mt-4">
-                Our Menu
-              </Link>
+              <div className="hero-title">
+                <h1 className="hero-h1 h2 text-primary font-weight-bold d-sm-block d-lg-none">
+                  “Treasure Every Encounter, For It Will Never Recur.”
+                </h1>
+                <h1 className="hero-h1 display-3 text-primary font-weight-bold d-none d-lg-block">
+                  “Treasure Every Encounter, For It Will Never Recur.”
+                </h1>
+                <h2 className="mt-4 h6 d-sm-block d-lg-none">
+                  You are “by the ocean” wherever you are, For Japan is
+                  surrounded by the ocean. Fish caught in the morning is on the
+                  table in the evening.
+                </h2>
+                <h2 className="mt-4 h2 d-none d-lg-block">
+                  You are “by the ocean” wherever you are, For Japan is
+                  surrounded by the ocean. Fish caught in the morning is on the
+                  table in the evening.
+                </h2>
+                <Link to={`/`} className="btn btn-primary d-md-none mr-3 mt-4">
+                  Book a Table
+                </Link>
+                <Link tp={`/`} className="btn btn-info mt-4 mr-auto">
+                  Our Menu
+                </Link>
+              </div>
             </div>
             <div className="hero-icon row position-absolute w-100">
               <Link to={`/`}>
@@ -156,8 +150,8 @@ function App() {
               </Link>
             </div>
           </div>
-          <div className="hero-image col-12 col-md-4 col-lg-6">
-            {/* <div className="plate-under mx-auto">
+          <div className="hero-image col-12 col-md-4 col-lg-6 d-none d-md-block">
+            <div className="plate-under mx-auto">
               <img
                 style={{ maxHeight: "806px", height: "84vh" }}
                 src={PlateUnder}
@@ -176,7 +170,7 @@ function App() {
                 src={Plate1}
                 alt="Food 1"
               />
-            </div> */}
+            </div>
           </div>
         </div>
       </header>
@@ -184,30 +178,155 @@ function App() {
         <section
           className="item-menu container v-max"
           style={{
-            background: `url(${MenuBg}) no-repeat`,
+            background: `url(${MenuBg}) no-repeat center`,
             backgroundSize: "100% auto",
           }}
-        ></section>
+        >
+          <div className="row h-100">
+            <div className="col-md-6 middle">
+              <img src={MenuFirst} alt="Menu" className="w-100" />
+            </div>
+            <div className="col-md-6 middle">
+              <div className="row">
+                <h1 className="item-menu-title h3 text-primary d-sm-block d-lg-none">
+                  The Finest Sea Cuisine
+                </h1>
+                <h1 className="item-menu-title display-4 text-primary d-none d-lg-block">
+                  The Finest Sea Cuisine
+                </h1>
+                <h2 className="h6 mt-4 text-gray d-sm-block d-lg-none">
+                  The menu is based on Japanese style, a fusion of Asian and
+                  Western food. The dishes are mainly made from fish delivered
+                  directly from the sea by the owner
+                </h2>
+                <h2 className="h4 mt-4 text-gray d-none d-lg-block">
+                  The menu is based on Japanese style, a fusion of Asian and
+                  Western food. The dishes are mainly made from fish delivered
+                  directly from the sea by the owner
+                </h2>
+                <button className="btn btn-info mt-4">Check Menu</button>
+              </div>
+            </div>
+          </div>
+        </section>
         <section
           className="item-list container v-max"
           style={{
-            background: `url(${ListBg}) no-repeat`,
+            background: `url(${ListBg}) no-repeat center`,
             backgroundSize: "100% auto",
           }}
-        ></section>
+        >
+          <div className="h-100 middle">
+            <div className="row text-center">
+              <div className="col-12">
+                <h1 className="h-3 text-primary d-sm-block d-lg-none">
+                  Best Sea Food
+                </h1>
+                <h1 className="display-4 text-primary d-none d-lg-block">
+                  Best Sea Food
+                </h1>
+              </div>
+              <div className="col-6 col-lg-3">
+                <div className="card">
+                  <img className="card-img-top mx-auto" src={Food1} alt="" />
+                  <h4 className="card-title">Sengyo no Karuppacho</h4>
+                  <div className="card-body">
+                    <p className="card-text">Fresh fish carpaccio</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6 col-lg-3">
+                <div className="card">
+                  <img className="card-img-top mx-auto" src={Food2} alt="" />
+                  <h4 className="card-title">Shimorhuri Gyu no Sushi</h4>
+                  <div className="card-body">
+                    <p className="card-text">Premium Japanese beef sushi</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6 col-lg-3">
+                <div className="card">
+                  <img className="card-img-top mx-auto" src={Food3} alt="" />
+                  <h4 className="card-title">Ebi no Ebi niyoru Ebi Sousu</h4>
+                  <div className="card-body">
+                    <p className="card-text">Prawn with prawn sauce</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6 col-lg-3">
+                <div className="card">
+                  <img className="card-img-top mx-auto" src={Food4} alt="" />
+                  <h4 className="card-title">Shinsen Zako no Guriru</h4>
+                  <div className="card-body">
+                    <p className="card-text">
+                      Grilled fresh fish with garlic, olive oil
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-12">
+                <button className="btn btn-info mt-4">Other Foods</button>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
       <section
         className="about container-fluid"
         style={{
-          background: `url(${AboutBg}) no-repeat`,
+          background: `url(${AboutBg}) no-repeat center`,
           backgroundSize: "100% auto",
         }}
-      ></section>
+      >
+        <div className="about-margin container">
+          <div className="row">
+            <div className="col-md-4">
+              <h1 className="h3 text-primary d-sm-block d-lg-none">
+                KAIKAYA <br />
+                By The Sea
+              </h1>
+              <h1 className="display-4 text-primary d-none d-lg-block">
+                KAIKAYA <br />
+                By The Sea
+              </h1>
+              <h2 className="h6 mt-4 text-gray d-sm-block d-lg-none">
+                In some country, there is a port town. In this tow, there is a
+                restaurant. Owned by a mysterius Japanese man, who cooks
+                marvelous seafood dishes.
+              </h2>
+              <h2 className="h4 mt-4 text-gray d-none d-lg-block">
+                In some country, there is a port town. In this tow, there is a
+                restaurant. Owned by a mysterius Japanese man, who cooks
+                marvelous seafood dishes.
+              </h2>
+              <button className="btn btn-info mt-4">About Us</button>
+            </div>
+            <div className="col-md-8 row">
+              <div className="about-2 mx-auto">
+                <img style={{ maxHeight: "725px" }} src={About2} alt="About2" />
+              </div>
+
+              <img
+                className="about-1 position-absolute"
+                style={{ maxHeight: "221px" }}
+                src={About1}
+                alt="About1"
+              />
+              <img
+                className="about-3 position-absolute"
+                style={{ maxHeight: "285px" }}
+                src={About3}
+                alt="About3"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="container-fluid v-max">
         <section
           className="review container border-bottom text-center mt-5 pt-5"
           style={{
-            background: `url(${ReviewBg}) no-repeat`,
+            background: `url(${ReviewBg}) no-repeat center`,
             backgroundSize: "100% auto",
           }}
         ></section>

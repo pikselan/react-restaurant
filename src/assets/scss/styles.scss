@@ -75,10 +75,15 @@ nav {
 .hero {
   .hero-text {
     height: 83vh;
-    .hero-title {
+    .hero-bg {
       height: 72vh;
-      .hero-h1 {
-        padding-top: 4vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .hero-title {
+        .hero-h1 {
+          line-height: 100%;
+        }
       }
     }
     .hero-icon {
@@ -107,8 +112,10 @@ nav {
 .content-base {
   margin-top: -15vh;
   padding-top: 15vh;
-  .item-menu {
-    margin-top: 9rem;
+  .middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .item-list {
     .row {
@@ -122,6 +129,10 @@ nav {
         }
         h4 {
           margin-top: 1rem;
+        }
+        .card-img-top {
+          height: auto;
+          width: 80%;
         }
         .card-body {
           margin-top: -1rem;
