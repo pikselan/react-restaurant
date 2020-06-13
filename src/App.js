@@ -1,9 +1,6 @@
 import React from "react";
 import "./assets/scss/styles.scss";
 import Logo from "./assets/images/logo.png";
-import PlateUnder from "./assets/images/plate-under.png";
-import Plate1 from "./assets/images/plate-1.png";
-import Plate2 from "./assets/images/plate-2.png";
 import HeroBg from "./assets/images/hero-bg.svg";
 import MenuBg from "./assets/images/menu-bg.svg";
 import ListBg from "./assets/images/list-bg.svg";
@@ -15,21 +12,24 @@ import IcTwitter from "./assets/images/ic-twitter.svg";
 import IcTripadvisor from "./assets/images/ic-tripadvisor.svg";
 import IcTripadvisorMini from "./assets/images/ic-tripadvisor-mini.svg";
 import IcPhone from "./assets/images/ic-phone.svg";
-import MenuFirst from "./assets/images/menu-first.png";
-import Food1 from "./assets/images/food-1.png";
-import Food2 from "./assets/images/food-2.png";
-import Food3 from "./assets/images/food-3.png";
-import Food4 from "./assets/images/food-4.png";
-import About1 from "./assets/images/about-1.png";
-import About2 from "./assets/images/about-2.png";
-import About3 from "./assets/images/about-3.png";
 import IcStar from "./assets/images/ic-star.svg";
 import IcLeft from "./assets/images/ic-left.svg";
 import IcRight from "./assets/images/ic-right.svg";
 import IcMap from "./assets/images/ic-map.svg";
 import ToTop from "./assets/images/to-top.svg";
+// import PlateUnder from "./assets/images/plate-under.png";
+// import Plate1 from "./assets/images/plate-1.png";
+// import Plate2 from "./assets/images/plate-2.png";
+// import MenuFirst from "./assets/images/menu-first.png";
+// import Food1 from "./assets/images/food-1.png";
+// import Food2 from "./assets/images/food-2.png";
+// import Food3 from "./assets/images/food-3.png";
+// import Food4 from "./assets/images/food-4.png";
+// import About1 from "./assets/images/about-1.png";
+// import About2 from "./assets/images/about-2.png";
+// import About3 from "./assets/images/about-3.png";
 import "./assets/js/index";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 function App() {
   return (
@@ -154,20 +154,20 @@ function App() {
             <div className="plate-under mx-auto">
               <img
                 style={{ maxHeight: "806px", height: "84vh" }}
-                src={PlateUnder}
+                src={`assets/images/plate-under.png`}
                 alt="Front Store"
               />
 
               <img
                 className="plate-2 position-absolute"
                 style={{ maxHeight: "386px", height: "24vw" }}
-                src={Plate2}
+                src={`assets/images/plate-2.png`}
                 alt="Food 2"
               />
               <img
                 className="plate-1 position-absolute"
                 style={{ maxHeight: "350px", height: "22vw" }}
-                src={Plate1}
+                src={`assets/images/plate-1.png`}
                 alt="Food 1"
               />
             </div>
@@ -184,7 +184,11 @@ function App() {
         >
           <div className="row h-100">
             <div className="col-md-6 middle">
-              <img src={MenuFirst} alt="Menu" className="w-100" />
+              <img
+                src={`assets/images/menu-first.png`}
+                alt="Menu"
+                className="w-100"
+              />
             </div>
             <div className="col-md-6 middle">
               <div className="row">
@@ -230,7 +234,11 @@ function App() {
               </div>
               <div className="col-6 col-md-3">
                 <div className="card">
-                  <img className="card-img-top mx-auto" src={Food1} alt="" />
+                  <img
+                    className="card-img-top mx-auto"
+                    src={`assets/images/food-1.png`}
+                    alt=""
+                  />
                   <h4 className="card-title">Sengyo no Karuppacho</h4>
                   <div className="card-body">
                     <p className="card-text text-truncate">
@@ -241,7 +249,11 @@ function App() {
               </div>
               <div className="col-6 col-md-3">
                 <div className="card">
-                  <img className="card-img-top mx-auto" src={Food2} alt="" />
+                  <img
+                    className="card-img-top mx-auto"
+                    src={`assets/images/food-2.png`}
+                    alt=""
+                  />
                   <h4 className="card-title">Shimorhuri Gyu no Sushi</h4>
                   <div className="card-body">
                     <p className="card-text text-truncate">
@@ -252,7 +264,11 @@ function App() {
               </div>
               <div className="col-6 col-md-3">
                 <div className="card">
-                  <img className="card-img-top mx-auto" src={Food3} alt="" />
+                  <img
+                    className="card-img-top mx-auto"
+                    src={`assets/images/food-3.png`}
+                    alt=""
+                  />
                   <h4 className="card-title">Ebi no Ebi niyoru Ebi Sousu</h4>
                   <div className="card-body">
                     <p className="card-text text-truncate">
@@ -263,7 +279,11 @@ function App() {
               </div>
               <div className="col-6 col-md-3">
                 <div className="card">
-                  <img className="card-img-top mx-auto" src={Food4} alt="" />
+                  <img
+                    className="card-img-top mx-auto"
+                    src={`assets/images/food-4.png`}
+                    alt=""
+                  />
                   <h4 className="card-title">Shinsen Zako no Guriru</h4>
                   <div className="card-body">
                     <p className="card-text text-truncate">
@@ -323,7 +343,7 @@ function App() {
                 <div className="about-2 mx-auto">
                   <img
                     style={{ maxHeight: "725px", height: "74vh" }}
-                    src={About2}
+                    src={`assets/images/about-2.png`}
                     alt="About2"
                   />
                 </div>
@@ -331,13 +351,13 @@ function App() {
                 <img
                   className="about-1 position-absolute"
                   style={{ maxHeight: "221px", height: "12vw" }}
-                  src={About1}
+                  src={`assets/images/about-1.png`}
                   alt="About1"
                 />
                 <img
                   className="about-3 position-absolute"
                   style={{ maxHeight: "285px", height: "15vw" }}
-                  src={About3}
+                  src={`assets/images/about-3.png`}
                   alt="About3"
                 />
               </div>
