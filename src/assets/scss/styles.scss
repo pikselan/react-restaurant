@@ -123,8 +123,8 @@ nav {
       .card {
         border: none;
         margin-top: 7rem;
-        height: 300px;
         border-radius: 0px 50px;
+        height: 70%;
         img {
           margin-top: -7rem;
         }
@@ -137,6 +137,9 @@ nav {
         }
         .card-body {
           margin-top: -1rem;
+        }
+        .card-text {
+          font-weight: lighter;
         }
       }
     }
@@ -168,4 +171,12 @@ nav {
       margin-bottom: 8rem;
     }
   }
+}
+
+.review {
+  height: 75vh;
+}
+
+.footer {
+  height: 25vh;
 }

@@ -228,39 +228,45 @@ function App() {
                   Best Sea Food
                 </h1>
               </div>
-              <div className="col-6 col-lg-3">
+              <div className="col-6 col-md-3">
                 <div className="card">
                   <img className="card-img-top mx-auto" src={Food1} alt="" />
                   <h4 className="card-title">Sengyo no Karuppacho</h4>
                   <div className="card-body">
-                    <p className="card-text">Fresh fish carpaccio</p>
+                    <p className="card-text text-truncate">
+                      Fresh fish carpaccio
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="col-6 col-lg-3">
+              <div className="col-6 col-md-3">
                 <div className="card">
                   <img className="card-img-top mx-auto" src={Food2} alt="" />
                   <h4 className="card-title">Shimorhuri Gyu no Sushi</h4>
                   <div className="card-body">
-                    <p className="card-text">Premium Japanese beef sushi</p>
+                    <p className="card-text text-truncate">
+                      Premium Japanese beef sushi
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="col-6 col-lg-3">
+              <div className="col-6 col-md-3">
                 <div className="card">
                   <img className="card-img-top mx-auto" src={Food3} alt="" />
                   <h4 className="card-title">Ebi no Ebi niyoru Ebi Sousu</h4>
                   <div className="card-body">
-                    <p className="card-text">Prawn with prawn sauce</p>
+                    <p className="card-text text-truncate">
+                      Prawn with prawn sauce
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="col-6 col-lg-3">
+              <div className="col-6 col-md-3">
                 <div className="card">
                   <img className="card-img-top mx-auto" src={Food4} alt="" />
                   <h4 className="card-title">Shinsen Zako no Guriru</h4>
                   <div className="card-body">
-                    <p className="card-text">
+                    <p className="card-text text-truncate">
                       Grilled fresh fish with garlic, olive oil
                     </p>
                   </div>
@@ -276,7 +282,9 @@ function App() {
         </section>
       </section>
       <section className="about container-fluid">
-        <div className="space-base container-fluid bg-base"></div>
+        <div className="space-base container-fluid">
+          <div className="bg-base h-100 d-none d-md-block"></div>
+        </div>
         <div
           className="container-fluid"
           style={{
@@ -339,13 +347,147 @@ function App() {
       </section>
       <section className="container-fluid v-max">
         <section
-          className="review container border-bottom text-center mt-5 pt-5"
+          className="review container border-bottom text-center middle"
           style={{
             background: `url(${ReviewBg}) no-repeat center`,
             backgroundSize: "100% auto",
           }}
-        ></section>
-        <footer className="container-fluid mt-3"></footer>
+        >
+          <div className="row">
+            <div className="col-1 middle">
+              <Link to={`/`}>
+                <img src={IcLeft} alt="" />
+              </Link>
+            </div>
+            <div className="col-10">
+              <div className="col-12">
+                <img src={IcStar} alt="" />
+                <img src={IcStar} alt="" />
+                <img src={IcStar} alt="" />
+                <img src={IcStar} alt="" />
+                <img src={IcStar} alt="" />
+              </div>
+              <div className="col-12 mt-4">
+                <h5 className="font-weight-bold text-primary">
+                  My favorite Sea food restaurant in Japan!
+                </h5>
+              </div>
+              <div className="col-12 mt-4">
+                <h5 className="font-italic">
+                  I love this restaurant because it’s calm and authentic. The
+                  service is excellent and I’ve always enjoyed the variety of
+                  dishes they offer.
+                </h5>
+              </div>
+              <div className="col-12 mt-4">
+                <h5>Satoshi Kimura</h5>
+                <h5 className="font-weight-light">Tokyo, Japan</h5>
+              </div>
+              <div className="col-12 mt-4">
+                <img src={IcTripadvisor} alt="" />
+              </div>
+            </div>
+            <div className="col-1 middle">
+              <Link to={`/`}>
+                <img src={IcRight} alt="" />
+              </Link>
+            </div>
+          </div>
+        </section>
+        <footer className="footer container-fluid middle">
+          <div className="row w-100">
+            <div className="col-12 text-center mb-2">
+              <img src={ToTop} alt="" />
+            </div>
+            <div className="col-md-4">
+              <div className="justify-content-start">
+                <div className="col-12 row">
+                  <Link
+                    to={`tel:+81337700878`}
+                    className="text-decoration-none row pl-3"
+                  >
+                    <img
+                      src={IcPhone}
+                      alt="Phone"
+                      className="d-none d-lg-block"
+                    />
+                    <h6 className="ml-3 my-2 d-block d-lg-none text-secondary">
+                      Call{" "}
+                    </h6>
+                    <h6 className="ml-3 my-2">+81-3-3770-0878</h6>
+                  </Link>
+                </div>
+                <div className="col-12 row">
+                  <img src={IcMap} alt="Map" className="d-none d-lg-block" />
+                  <span className="ml-3 my-2 font-weight-light">
+                    23-7 Maruyama-cho, Shibuya-ku, Tokyo
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-4 text-center">
+              <nav className="navbar navbar-expand-md navbar-light bg-white d-none d-lg-block">
+                <div
+                  className="collapse navbar-collapse justify-content-center h4"
+                  id="navbar"
+                >
+                  <ul className="navbar-nav">
+                    <li className="nav-item">
+                      <Link to={`/`} className="nav-link">
+                        Menu
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link to={`/`} className="nav-link">
+                        Gallery
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link to={`/`} className="nav-link">
+                        About
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link to={`/`} className="nav-link">
+                        Contact
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+
+              <span className="font-weight-light">
+                Copyright @ 2020 Kaikaya By The Sea
+              </span>
+            </div>
+            <div className="col-md-4">
+              <div className="d-none d-md-block">
+                <div className="col-12 row justify-content-end">
+                  <Link to={`/`}>
+                    <img src={IcFacebook} alt="Facebook" />
+                  </Link>
+                  <Link to={`/`}>
+                    <img src={IcTwitter} alt="Twitter" className="ml-3" />
+                  </Link>
+                  <Link to={`/`}>
+                    <img src={IcInstagram} alt="Instagram" className="ml-3" />
+                  </Link>
+                  <Link to={`/`}>
+                    <img
+                      src={IcTripadvisorMini}
+                      alt="Tripadvisor"
+                      className="ml-3"
+                    />
+                  </Link>
+                </div>
+              </div>
+              <div className="col-12 row justify-content-end">
+                <p className="mr-3 my-2 font-weight-light">Privacy Policy</p>
+                <p className="my-2 font-weight-light">Cookies</p>
+              </div>
+            </div>
+          </div>
+        </footer>
       </section>
     </Router>
   );
