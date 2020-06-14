@@ -158,6 +158,9 @@ nav {
   .about-margin {
     margin-top: -5rem;
     height: 80vh;
+    .about-title {
+      white-space: pre-wrap;
+    }
     .about-2 {
       width: 445px;
     }

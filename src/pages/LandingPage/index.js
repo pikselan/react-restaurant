@@ -220,10 +220,10 @@ export default class index extends Component {
                 <div className="col-md-4 middle">
                   <div className="row">
                     <Fade bottom>
-                      <h1 className="h3 text-primary d-sm-block d-lg-none">
+                      <h1 className="about-title h3 text-primary d-sm-block d-lg-none">
                         {data.about.title}
                       </h1>
-                      <h1 className="display-4 text-primary d-none d-lg-block">
+                      <h1 className="about-title display-4 text-primary d-none d-lg-block">
                         {data.about.title}
                       </h1>
                       <h2 className="h6 mt-4 text-gray d-sm-block d-lg-none">
