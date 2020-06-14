@@ -1,0 +1,49 @@
+{
+  "title": "Treasure Every Encounter, For It Will Never Recur.",
+  "description": "You are \"by the ocean\" wherever you are, For Japan is surrounded by the ocean. Fish caught in the morning is on the table in the evening.",
+  "hero": {
+    "image1": "assets/images/plate-under.png",
+    "image2": "assets/images/plate-1.png",
+    "image3": "assets/images/plate-2.png"
+  },
+  "content": {
+    "imagePrimary": "assets/images/menu-first.png",
+    "title": "The Finest Sea Cuisine",
+    "description": "The menu is based on Japanese style, a fusion of Asian and Western food. The dishes are mainly made from fish delivered directly from the sea by the owner",
+    "popular": [
+      {
+        "image": "assets/images/food-1.png",
+        "description": "Sengyo no Karuppacho",
+        "title": "Fresh fish carpaccio"
+      },
+      {
+        "image": "assets/images/food-2.png",
+        "description": "Shimorhuri Gyu no Sushi",
+        "title": "Premium Japanese beef sushi"
+      },
+      {
+        "image": "assets/images/food-3.png",
+        "description": "Ebi no Ebi niyoru Ebi Sousu",
+        "title": "Prawn with prawn sauce"
+      },
+      {
+        "image": "assets/images/food-4.png",
+        "description": "Shinsen Zako no Guriru",
+        "title": "Grilled fresh fish with garlic, olive oil"
+      }
+    ]
+  },
+  "about": {
+    "title": "Kaikaya By The Sea",
+    "description": "In some country, there is a port town. In this tow, there is a restaurant. Owned by a mysterius Japanese man, who cooks marvelous seafood dishes.",
+    "image1": "assets/images/about-1.png",
+    "image2": "assets/images/about-2.png",
+    "image3": "assets/images/about-3.png"
+  },
+  "review": {
+    "title": "My favorite Sea food restaurant in Japan!",
+    "description": "I love this restaurant because it’s calm and authentic. The service is excellent and I’ve always enjoyed the variety of dishes they offer.",
+    "name": "Satoshi Kimura",
+    "from": "Tokyo, Japan"
+  }
+}

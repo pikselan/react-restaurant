@@ -10,7 +10,7 @@ export default function Nav() {
         <Logo />
       </Button>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbar"
@@ -18,7 +18,7 @@ export default function Nav() {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
       <NavItem
         className="collapse navbar-collapse justify-content-center h4"

@@ -39,8 +39,8 @@ export default function Footer() {
               </div>
               <div className="col-12 row">
                 <img src={IcMap} alt="Map" className="d-none d-lg-block" />
-                <span className="ml-3 my-2 font-weight-light">
-                  23-7 Maruyama-cho, Shibuya-ku, Tokyo
+                <span className="ml-3 my-2">
+                  <small>23-7 Maruyama-cho, Shibuya-ku, Tokyo</small>
                 </span>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function Footer() {
             </nav>
 
             <span className="font-weight-light">
-              Copyright @ 2020 Kaikaya By The Sea
+              <small>Copyright @ 2020 Kaikaya By The Sea</small>
             </span>
           </div>
         </Fade>
@@ -66,8 +66,12 @@ export default function Footer() {
               <Social className="col-12 row justify-content-end" />
             </div>
             <div className="col-12 row justify-content-end">
-              <p className="mr-3 my-2 font-weight-light">Privacy Policy</p>
-              <p className="my-2 font-weight-light">Cookies</p>
+              <p className="mr-3 my-2 font-weight-light">
+                <small>Privacy Policy</small>
+              </p>
+              <p className="my-2 font-weight-light">
+                <small>Cookies</small>
+              </p>
             </div>
           </div>
         </Fade>

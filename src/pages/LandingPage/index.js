@@ -16,6 +16,8 @@ import IcTripadvisor from "../../assets/images/ic-tripadvisor.svg";
 import IcLeft from "../../assets/images/ic-left.svg";
 import IcRight from "../../assets/images/ic-right.svg";
 
+import data from "../../json/LandingPage.json";
+
 export default class index extends Component {
   render() {
     return (
@@ -34,27 +36,23 @@ export default class index extends Component {
                 }}
               >
                 <div className="hero-title">
-                  <Fade bottom delay="200">
+                  <Fade bottom delay={200}>
                     <h1 className="hero-h1 h2 text-primary font-weight-bold d-sm-block d-lg-none">
-                      “Treasure Every Encounter, For It Will Never Recur.”
+                      {data.title}
                     </h1>
                     <h1 className="hero-h1 display-3 text-primary font-weight-bold d-none d-lg-block">
-                      “Treasure Every Encounter, For It Will Never Recur.”
+                      {data.title}
                     </h1>
                   </Fade>
-                  <Fade bottom delay="400">
+                  <Fade bottom delay={400}>
                     <h2 className="mt-4 h6 d-sm-block d-lg-none">
-                      You are “by the ocean” wherever you are, For Japan is
-                      surrounded by the ocean. Fish caught in the morning is on
-                      the table in the evening.
+                      {data.description}
                     </h2>
                     <h2 className="mt-4 h2 d-none d-lg-block">
-                      You are “by the ocean” wherever you are, For Japan is
-                      surrounded by the ocean. Fish caught in the morning is on
-                      the table in the evening.
+                      {data.description}
                     </h2>
                   </Fade>
-                  <Fade bottom delay="600">
+                  <Fade bottom delay={600}>
                     <Button
                       href={`/`}
                       type="link"
@@ -80,27 +78,27 @@ export default class index extends Component {
             </div>
             <div className="hero-image col-12 col-md-4 col-lg-6 d-none d-md-block">
               <div className="plate-under mx-auto">
-                <Fade delay="200">
+                <Fade delay={200}>
                   <img
                     style={{ maxHeight: "806px", height: "84vh" }}
-                    src={`assets/images/plate-under.png`}
+                    src={data.hero.image1}
                     alt="Front Store"
                   />
                 </Fade>
 
-                <Fade left delay="600">
+                <Fade left delay={600}>
                   <img
                     className="plate-2 position-absolute"
                     style={{ maxHeight: "386px", height: "24vw" }}
-                    src={`assets/images/plate-2.png`}
+                    src={data.hero.image3}
                     alt="Food 2"
                   />
                 </Fade>
-                <Fade right delay="400">
+                <Fade right delay={400}>
                   <img
                     className="plate-1 position-absolute"
                     style={{ maxHeight: "350px", height: "22vw" }}
-                    src={`assets/images/plate-1.png`}
+                    src={data.hero.image2}
                     alt="Food 1"
                   />
                 </Fade>
@@ -120,7 +118,7 @@ export default class index extends Component {
               <div className="col-md-6 middle">
                 <Fade bottom>
                   <img
-                    src={`assets/images/menu-first.png`}
+                    src={data.content.imagePrimary}
                     alt="Menu"
                     className="w-100"
                   />
@@ -130,20 +128,16 @@ export default class index extends Component {
                 <div className="row">
                   <Fade bottom>
                     <h1 className="item-menu-title h3 text-primary d-sm-block d-lg-none">
-                      The Finest Sea Cuisine
+                      {data.content.title}
                     </h1>
                     <h1 className="item-menu-title display-4 text-primary d-none d-lg-block">
-                      The Finest Sea Cuisine
+                      {data.content.title}
                     </h1>
                     <h2 className="h6 mt-4 text-gray d-sm-block d-lg-none">
-                      The menu is based on Japanese style, a fusion of Asian and
-                      Western food. The dishes are mainly made from fish
-                      delivered directly from the sea by the owner
+                      {data.content.description}
                     </h2>
                     <h2 className="h4 mt-4 text-gray d-none d-lg-block">
-                      The menu is based on Japanese style, a fusion of Asian and
-                      Western food. The dishes are mainly made from fish
-                      delivered directly from the sea by the owner
+                      {data.content.description}
                     </h2>
                     <Button
                       href={`/`}
@@ -177,68 +171,25 @@ export default class index extends Component {
                   </Fade>
                 </div>
                 <Fade bottom>
-                  <div className="col-6 col-md-3">
-                    <div className="card">
-                      <img
-                        className="card-img-top mx-auto"
-                        src={`assets/images/food-1.png`}
-                        alt=""
-                      />
-                      <h4 className="card-title">Sengyo no Karuppacho</h4>
-                      <div className="card-body">
-                        <p className="card-text text-truncate">
-                          Fresh fish carpaccio
-                        </p>
+                  {data.content.popular.map((item, index) => {
+                    return (
+                      <div className="col-6 col-md-3" key={`popular-${index}`}>
+                        <div className="card">
+                          <img
+                            className="card-img-top mx-auto"
+                            src={item.image}
+                            alt=""
+                          />
+                          <h4 className="card-title">{item.title}</h4>
+                          <div className="card-body">
+                            <p className="card-text text-truncate">
+                              {item.description}
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="col-6 col-md-3">
-                    <div className="card">
-                      <img
-                        className="card-img-top mx-auto"
-                        src={`assets/images/food-2.png`}
-                        alt=""
-                      />
-                      <h4 className="card-title">Shimorhuri Gyu no Sushi</h4>
-                      <div className="card-body">
-                        <p className="card-text text-truncate">
-                          Premium Japanese beef sushi
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-6 col-md-3">
-                    <div className="card">
-                      <img
-                        className="card-img-top mx-auto"
-                        src={`assets/images/food-3.png`}
-                        alt=""
-                      />
-                      <h4 className="card-title">
-                        Ebi no Ebi niyoru Ebi Sousu
-                      </h4>
-                      <div className="card-body">
-                        <p className="card-text text-truncate">
-                          Prawn with prawn sauce
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-6 col-md-3">
-                    <div className="card">
-                      <img
-                        className="card-img-top mx-auto"
-                        src={`assets/images/food-4.png`}
-                        alt=""
-                      />
-                      <h4 className="card-title">Shinsen Zako no Guriru</h4>
-                      <div className="card-body">
-                        <p className="card-text text-truncate">
-                          Grilled fresh fish with garlic, olive oil
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                    );
+                  })}
                   <div className="col-12">
                     <Button
                       href={`/`}
@@ -270,22 +221,16 @@ export default class index extends Component {
                   <div className="row">
                     <Fade bottom>
                       <h1 className="h3 text-primary d-sm-block d-lg-none">
-                        KAIKAYA <br />
-                        By The Sea
+                        {data.about.title}
                       </h1>
                       <h1 className="display-4 text-primary d-none d-lg-block">
-                        KAIKAYA <br />
-                        By The Sea
+                        {data.about.title}
                       </h1>
                       <h2 className="h6 mt-4 text-gray d-sm-block d-lg-none">
-                        In some country, there is a port town. In this tow,
-                        there is a restaurant. Owned by a mysterius Japanese
-                        man, who cooks marvelous seafood dishes.
+                        {data.about.description}
                       </h2>
                       <h2 className="h4 mt-4 text-gray d-none d-lg-block">
-                        In some country, there is a port town. In this tow,
-                        there is a restaurant. Owned by a mysterius Japanese
-                        man, who cooks marvelous seafood dishes.
+                        {data.about.description}
                       </h2>
                       <Button
                         href={`/`}
@@ -302,7 +247,7 @@ export default class index extends Component {
                     <Fade>
                       <img
                         style={{ maxHeight: "725px", height: "74vh" }}
-                        src={`assets/images/about-2.png`}
+                        src={data.about.image2}
                         alt="About2"
                       />
                     </Fade>
@@ -312,7 +257,7 @@ export default class index extends Component {
                     <img
                       className="about-1 position-absolute"
                       style={{ maxHeight: "221px", height: "12vw" }}
-                      src={`assets/images/about-1.png`}
+                      src={data.about.image1}
                       alt="About1"
                     />
                   </Fade>
@@ -320,7 +265,7 @@ export default class index extends Component {
                     <img
                       className="about-3 position-absolute"
                       style={{ maxHeight: "285px", height: "15vw" }}
-                      src={`assets/images/about-3.png`}
+                      src={data.about.image3}
                       alt="About3"
                     />
                   </Fade>
@@ -338,46 +283,46 @@ export default class index extends Component {
             }}
           >
             <div className="row">
-              <div className="col-1 middle">
-                <Fade left>
-                  <Button href={`/`} type="link">
-                    <img src={IcLeft} alt="" />
-                  </Button>
-                </Fade>
+              <div className="col-1 d-none d-sm-block">
+                <div className="h-100 middle">
+                  <Fade left>
+                    <Button href={`/`} type="link">
+                      <img src={IcLeft} alt="" />
+                    </Button>
+                  </Fade>
+                </div>
               </div>
-              <div className="col-10">
+              <div className="col-12 col-sm-10">
                 <Fade bottom>
                   <Star className="col-12" />
                   <div className="col-12 mt-4">
                     <h5 className="h6 font-weight-bold text-primary d-sm-block d-lg-none">
-                      My favorite Sea food restaurant in Japan!
+                      {data.review.title}
                     </h5>
                     <h5 className="font-weight-bold text-primary d-none d-lg-block">
-                      My favorite Sea food restaurant in Japan!
+                      {data.review.title}
                     </h5>
                   </div>
                   <div className="col-12 mt-4">
                     <h5 className="h6 font-italic d-sm-block d-lg-none">
-                      I love this restaurant because it’s calm and authentic.
-                      The service is excellent and I’ve always enjoyed the
-                      variety of dishes they offer.
+                      {data.review.description}
                     </h5>
                     <h5 className="font-italic d-none d-lg-block">
-                      I love this restaurant because it’s calm and authentic.
-                      The service is excellent and I’ve always enjoyed the
-                      variety of dishes they offer.
+                      {data.review.description}
                     </h5>
                   </div>
                   <div className="col-12 mt-4">
                     <div className="d-sm-block d-lg-none">
                       <h6>
-                        Satoshi Kimura.{" "}
-                        <span className="font-weight-light">Tokyo, Japan</span>
+                        {`${data.review.name}. `}
+                        <span className="font-weight-light">
+                          {data.review.fom}
+                        </span>
                       </h6>
                     </div>
                     <div className="d-none d-lg-block">
-                      <h5>Satoshi Kimura</h5>
-                      <h5 className="font-weight-light">Tokyo, Japan</h5>
+                      <h5>{`${data.review.name}. `}</h5>
+                      <h5 className="font-weight-light">{data.review.from}</h5>
                     </div>
                   </div>
                   <div className="col-12 mt-4 d-none d-sm-block">
@@ -385,12 +330,14 @@ export default class index extends Component {
                   </div>
                 </Fade>
               </div>
-              <div className="col-1 middle">
-                <Button href={`/`} type="link">
-                  <Fade right>
-                    <img src={IcRight} alt="" />
-                  </Fade>
-                </Button>
+              <div className="col-1 d-none d-sm-block">
+                <div className="h-100 middle">
+                  <Button href={`/`} type="link">
+                    <Fade right>
+                      <img src={IcRight} alt="" />
+                    </Fade>
+                  </Button>
+                </div>
               </div>
             </div>
           </section>
