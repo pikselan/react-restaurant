@@ -24,7 +24,7 @@ export default class index extends Component {
       <div>
         <header className="container-fluid v-max">
           <Fade bottom>
-            <Nav />
+            <Nav {...this.props} />
           </Fade>
           <div className="hero row">
             <div className="hero-text col-12 col-md-8 col-lg-6">

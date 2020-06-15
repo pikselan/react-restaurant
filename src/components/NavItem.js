@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function NavItem(props) {
   const getNavActive = (path) => {
-    // return props.history.location.pathname === path ? "active" : "";
+    return props.pathname === path ? "active" : "";
   };
   return (
     <div className={props.className} id={props.id}>

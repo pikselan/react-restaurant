@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import Button from "./Button";
 import NavItem from "./NavItem";
 
-export default function Nav() {
+export default function Nav(props) {
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-white">
       <Button href={`/`} type="link" className="navbar-brand">
@@ -21,6 +21,7 @@ export default function Nav() {
         <span className="navbar-toggler-icon"></span>
       </button>
       <NavItem
+        pathname={props.location.pathname}
         className="collapse navbar-collapse justify-content-center h4"
         id="navbar"
       />
