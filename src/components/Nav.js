@@ -4,6 +4,15 @@ import Button from "./Button";
 import NavItem from "./NavItem";
 
 export default function Nav(props) {
+  if (props.isSingle) {
+    return (
+      <nav className="navbar navbar-expand-md navbar-light bg-white justify-content-center">
+        <Button href={`/`} type="link" className="navbar-brand">
+          <Logo />
+        </Button>
+      </nav>
+    );
+  }
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-white">
       <Button href={`/`} type="link" className="navbar-brand">

@@ -12,6 +12,8 @@ import NotFoundPage from "./pages/NotFoundPage";
 import "./assets/scss/styles.scss";
 import "./assets/js/index";
 
+// import ContactData from "./json/Contact.json";
+
 export default class App extends Component {
   render() {
     return (

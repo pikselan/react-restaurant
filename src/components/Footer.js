@@ -9,15 +9,16 @@ import NavItem from "./NavItem";
 
 export default function Footer(props) {
   const toTop = () => {
-    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   };
   return (
     <footer className="footer container-fluid middle">
       <div className="row w-100">
         <Fade bottom>
           <div className="col-12 text-center mb-2">
-            <Button className="btn" onClick={toTop()}>
-              <img src={ToTop} alt="" width="4vh" />
+            <Button type="link" className="btn" onClick={toTop()} href="#">
+              <img src={ToTop} alt="" />
             </Button>
           </div>
         </Fade>
