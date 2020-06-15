@@ -45,6 +45,10 @@
 @import "utilities";
 @import "print";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   height: 100%;
@@ -206,7 +210,7 @@ nav {
 }
 
 .content-menu {
-  margin-top: -50vh;
+  margin-top: -65vh;
   padding: 10vh 0;
   .row {
     .card {
@@ -254,14 +258,19 @@ nav {
 }
 
 .content-gallery {
-  margin-top: -50vh;
+  margin-top: -65vh;
   padding: 10vh 0;
 }
 
 .content-about {
-  margin-top: -50vh;
+  margin-top: -65vh;
   padding: 10vh 0;
   img {
     margin-bottom: 15px;
   }
+}
+
+.content-book {
+  margin-top: -65vh;
+  padding: 10vh 0;
 }

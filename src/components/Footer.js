@@ -8,16 +8,21 @@ import Button from "./Button";
 import NavItem from "./NavItem";
 
 export default function Footer(props) {
+  const toTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <footer className="footer container-fluid middle">
       <div className="row w-100">
         <Fade bottom>
           <div className="col-12 text-center mb-2">
-            <img src={ToTop} alt="" />
+            <Button className="btn" onClick={toTop()}>
+              <img src={ToTop} alt="" width="4vh" />
+            </Button>
           </div>
         </Fade>
         <Fade left>
-          <div className="col-md-4">
+          <div className="col-md-4" id="contact">
             <div className="justify-content-start">
               <div className="col-12 row">
                 <Button

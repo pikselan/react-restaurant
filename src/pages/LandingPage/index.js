@@ -19,6 +19,10 @@ import IcRight from "../../assets/images/ic-right.svg";
 import data from "../../json/LandingPage.json";
 
 export default class index extends Component {
+  componentDidMount() {
+    document.title = `Kaikaya by The Sea - ${data.title}`;
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div>
@@ -38,10 +42,10 @@ export default class index extends Component {
                 <div className="hero-title">
                   <Fade bottom delay={200}>
                     <h1 className="hero-h1 h2 text-primary font-weight-bold d-sm-block d-lg-none">
-                      {data.title}
+                      {data.heading}
                     </h1>
                     <h1 className="hero-h1 display-3 text-primary font-weight-bold d-none d-lg-block">
-                      {data.title}
+                      {data.heading}
                     </h1>
                   </Fade>
                   <Fade bottom delay={400}>
@@ -54,14 +58,14 @@ export default class index extends Component {
                   </Fade>
                   <Fade bottom delay={600}>
                     <Button
-                      href={`/`}
+                      href={`/book`}
                       type="link"
                       className="btn btn-primary d-md-none mr-3 mt-4"
                     >
                       Book a Table
                     </Button>
                     <Button
-                      href={`/`}
+                      href={`/menu`}
                       type="link"
                       className="btn btn-info mt-4 mr-auto"
                     >
@@ -140,11 +144,11 @@ export default class index extends Component {
                       {data.content.description}
                     </h2>
                     <Button
-                      href={`/`}
+                      href={`/gallery`}
                       type="link"
                       className="btn btn-info mt-4"
                     >
-                      Check Menu
+                      Check Gallery
                     </Button>
                   </Fade>
                 </div>
@@ -206,7 +210,7 @@ export default class index extends Component {
                   })}
                   <div className="col-12">
                     <Button
-                      href={`/`}
+                      href={`/menu`}
                       type="link"
                       className="btn btn-info mt-4"
                     >
@@ -247,7 +251,7 @@ export default class index extends Component {
                         {data.about.description}
                       </h2>
                       <Button
-                        href={`/`}
+                        href={`/about`}
                         type="link"
                         className="btn btn-info mt-4"
                       >

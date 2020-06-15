@@ -9,6 +9,10 @@ import MenuBg from "../../assets/images/about-bg.svg";
 import data from "../../json/MenuPage.json";
 
 export default class index extends Component {
+  componentDidMount() {
+    document.title = `Kaikaya by The Sea - ${data.title}`;
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div>

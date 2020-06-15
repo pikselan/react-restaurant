@@ -24,7 +24,7 @@ export default function NavItem(props) {
           </Button>
         </li>
         <li className={`nav-item`}>
-          <Button href={`/book`} type="link" className="nav-link">
+          <Button href={`/book#contact`} type="link" className="nav-link">
             Contact
           </Button>
         </li>

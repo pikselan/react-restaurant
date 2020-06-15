@@ -9,6 +9,10 @@ import AboutBg from "../../assets/images/review-bg.svg";
 import data from "../../json/AboutPage.json";
 
 export default class index extends Component {
+  componentDidMount() {
+    document.title = `Kaikaya by The Sea - ${data.title}`;
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div>

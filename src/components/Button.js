@@ -32,6 +32,7 @@ export default function Button(props) {
           href={props.href}
           className={className}
           style={props.style}
+          onClick={onClick}
           target={props.target === "_blank" ? "_blank" : undefined}
           rel={props.target === "_blank" ? "noopener noreferrer" : undefined}
         >

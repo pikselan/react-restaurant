@@ -1,13 +1,46 @@
 {
-  "title": "Booking!",
+  "title": "開花屋, Booking!",
   "imageFood": "assets/images/book-food.png",
   "imageMap": "assets/images/book-map.png",
   "english": {
-    "infoStore": "Location: 23-7 Maruyama-cho, Shibuya-ku, Tokyo\nTraffic: Keio-Inokashira-Line Shinsen Station →\n2-minute walk Shibuya Station → 10-minute walk\nTelephone: 03-3770-0878\nOpening Hours:\nOpen 7days a week 5:00 PM ~11:30PM (Last order 10:30 PM)\n\nOpen every day except New Year's holiday...\nNeed reservation on weekend... Our shop has70 seat...\nMore than 30 different fresh fish selections daily...\nSpecial selected 14~18 kinds of SAKE & SHOCHU...\nEnglish menu available...",
+    "desclaimer": "You can booking on OpenTable. Would you want to questionnaire about allergy.",
+    "options": "If you choose to 'No'. You can choose date.",
+    "warning": "Note: Allergy requests are not accepted after 2 days prior to arrival.",
+    "infoStore": "Location: 23-7 Maruyama-cho, Shibuya-ku, Tokyo\nTraffic: \nKeio-Inokashira-Line Shinsen Station →\n2-minute walk Shibuya Station → 10-minute walk\nTelephone: 03-3770-0878\nOpening Hours:\nOpen 7days a week 5:00 PM ~11:30PM \n(Last order 10:30 PM)\n\nOpen every day except New Year's holiday...\nNeed reservation on weekend... Our shop has70 seat...\nMore than 30 different fresh fish selections daily...\nSpecial selected 14~18 kinds of SAKE & SHOCHU...\nEnglish menu available...",
     "note": "Important Note：\n★Cancellation Policy(per person):・On the day:8000JPY/・2days before and the day before the book date:5000JPY※Booking for 13 people or more：From the previous day to 7 days ago:5000JPY ★Books for 10 people or more, please be sure to select or write a course. 3500yen/4200yen/4800yen (by excluding tax) ★Books for 13 people or more: It is possible to book only by Phone (Phone that can be reply in Japan).Please book by web later ★We cannot accept a request for increase in the number of the people after 2days before the reservation date. ★If you have children, you are available only reserve at 5:00, 5:30, 6:00 pm. And if you have children under 10 years, please mention as such through our comment fie. ★We allow 2 hours from the reserved time. ★Baby strollers is not allowed. ★Please check to receive email from us."
   },
   "japanese": {
-    "infoStore": "住所：渋谷区円山町23-7\n電話：03-3770-0878\n営業:17:00~23:30\nラストオーダー22:30\n基本的に年中無休\n交通京王井の頭神泉駅より徒歩2分\n全席禁煙 70 席、日本酒は常時 14~18 種。\n\n週末の夜は要予約。",
+    "desclaimer": "ご予約はOpenTableで承ります。初めにアレルギーなどお料理に特別なご注文はございますか？",
+    "options": "いいえを押すと予約日時選択ができます",
+    "warning": "ご注意：ご来店2日前を過ぎるとアレルギーに関するご注文をお受けできません。",
+    "infoStore": "住所：渋谷区円山町23-7\n電話：03-3770-0878\n営業：17:00~23:30\nラストオーダー22:30\n基本的に年中無休\n交通京王井の頭神泉駅より徒歩2分\n全席禁煙 70 席、日本酒は常時 14~18 種。\n\n週末の夜は要予約。",
     "note": "ご予約の際の重要事項：\n★キャンセルポリシー(お一人様当りのキャンセル料)： 当日キャンセル:8000円/予約前々日～前日キャンセル:5000円/13名以上の予約は7日前からキャンセルフィー発生(当日8000円/前日～7日前まで 5000円) ご予約について：★10名様以上のご予約は、必ずコースをお選びいただきますので、コースを選択するかもしくはご記入ください。3500円/4200円/4800円(税金別)・13名以上のご予約は、電話(日本国内で返信可能な電話)でのみ賜ります。その後web予約をいただきます。 ★2時間制になります。★メニュー詳細は、HP、店内メニューにてご確認下さい。★全席禁煙席です。 ★記念日等の特別対応やお料理はご用意しておりません。★アレルギー、苦手食材がありましたら注意事項を確認の上、予約フォームにご記入ください。★予約ページの「当店からメールを受け取る」のチェックをお願い申し上げます。ご希望に添えない場合がございます。 ★ご予約の変更：・予約前々日以降の人数増加は致しかねます。予約前々日前の人数変更は必ずお電話ください。人数増加ができない場合もございますのでご了承ください。人数減の場合はキャンセル料を頂きます。 ★お子様：・お子様連れのお客様は、18:00迄にご来店のご予約のみになります。予約人数に10歳以下のお子様がいらっしゃる場合は必ず大人と子供の内訳をご記入下さい。・ベビーカーはご利用頂けません。対応可能な場合もございます。お電話でお問合せ下さい。◆お子様向けのお料理のご用意はございません。"
+  },
+  "desclaimer": {
+    "title": "お料理に特別なご注文のあるお客様は以下を必ずご確認下さい \nPlease read the following guidelines, if you have any personal requests.",
+    "item": [
+      {
+        "text": "各種肉類及び肉由来の食材を一切使わないお料理はお受けできます。\nWe can make dishes which do not contain any kind of meat product of your choice."
+      },
+      {
+        "text": "ソバ、ピーナッツ、卵などを一切使用しないお料理はお受けできます。\nWe can make dishes which do not contain buckwheat, peanuts, egg product."
+      },
+      {
+        "text": "小麦などの穀物、甲殻類、乳製品などを一切使用しないお料理はお客様のご要望を詳細にお聞きした上でお受け出来ます。\nRegarding requested dishes that do not use ; grains such as wheat, crustaceans such as crab, shrimps other shellfish, dairy products such as milk, we can provide them once we have confirmed with you."
+      },
+      {
+        "text": "完全菜食料理（ビーガン料理）は申し訳ありませんがお作り出来ません。\nWe’re sorry but we can’t serve Vegan cuisine."
+      },
+      {
+        "text": "魚介類を一切使用しないお料理は申し訳ありませんがお作り出来ません。\nWe’re sorry but we can’t serve dishes that do not use any seafood."
+      },
+      {
+        "text": "乳幼児へのお料理は申し訳ありませんがお作り出来ません。\nWe’re sorry but we can’t serve dishes for infants."
+      },
+      {
+        "text": "ご注意：ご来店2日前を過ぎるとアレルギーに関するご注文をお受けできません。\nNote: Allergy requests are not accepted after 2 days prior to arrival."
+      }
+    ],
+    "confirm": "上記項目を確認し、了承の上予約フォームへお進み下さい。\nPlease confirm the above points and upon agreement, Please proceed to the reservation form."
   }
 }

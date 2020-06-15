@@ -26,7 +26,7 @@ export default function Nav(props) {
         id="navbar"
       />
       <Button
-        href={`/`}
+        href={`/book`}
         type="link"
         className="btn btn-primary d-none d-md-block"
       >

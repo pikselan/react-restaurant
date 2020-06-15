@@ -10,6 +10,10 @@ import GalleryBg from "../../assets/images/menu-bg.svg";
 import data from "../../json/GalleryPage.json";
 
 export default class index extends Component {
+  componentDidMount() {
+    document.title = `Kaikaya by The Sea - ${data.title}`;
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div>
