@@ -24,7 +24,7 @@ export default class index extends Component {
       <div>
         <header className="container-fluid v-max">
           <Fade bottom>
-            <Nav {...this.props} />
+            <Nav pathname={this.props.location.pathname} />
           </Fade>
           <div className="hero row">
             <div className="hero-text col-12 col-md-8 col-lg-6">
@@ -173,8 +173,22 @@ export default class index extends Component {
                 <Fade bottom>
                   {data.content.popular.map((item, index) => {
                     return (
-                      <div className="col-6 col-md-3" key={`popular-${index}`}>
-                        <div className="card">
+                      <div
+                        className="col-6 col-md-3 mt-2"
+                        key={`popular-${index}`}
+                      >
+                        <div className="card d-sm-block d-lg-none">
+                          <img
+                            className="mx-auto"
+                            src={item.image}
+                            alt=""
+                            style={{ width: "100%" }}
+                          />
+                          <h4 className="h5 small card-title d-sm-block d-lg-none">
+                            {item.title}
+                          </h4>
+                        </div>
+                        <div className="card d-none d-lg-block">
                           <img
                             className="card-img-top mx-auto"
                             src={item.image}
@@ -194,7 +208,7 @@ export default class index extends Component {
                     <Button
                       href={`/`}
                       type="link"
-                      className="btn btn-info mt-5"
+                      className="btn btn-info mt-4"
                     >
                       Other Foods
                     </Button>
@@ -341,7 +355,7 @@ export default class index extends Component {
               </div>
             </div>
           </section>
-          <Footer />
+          <Footer pathname={this.props.location.pathname} />
         </section>
       </div>
     );

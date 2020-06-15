@@ -7,7 +7,7 @@ import Social from "./Social";
 import Button from "./Button";
 import NavItem from "./NavItem";
 
-export default function Footer() {
+export default function Footer(props) {
   return (
     <footer className="footer container-fluid middle">
       <div className="row w-100">
@@ -50,6 +50,7 @@ export default function Footer() {
           <div className="col-md-4 text-center">
             <nav className="navbar navbar-expand-md navbar-light bg-white d-none d-lg-block">
               <NavItem
+                pathname={props.pathname}
                 className="collapse navbar-collapse justify-content-center h4"
                 id="navbar"
               />

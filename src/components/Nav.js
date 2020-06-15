@@ -21,7 +21,7 @@ export default function Nav(props) {
         <span className="navbar-toggler-icon"></span>
       </button>
       <NavItem
-        pathname={props.location.pathname}
+        pathname={props.pathname}
         className="collapse navbar-collapse justify-content-center h4"
         id="navbar"
       />

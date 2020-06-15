@@ -78,6 +78,10 @@ nav {
   align-items: center;
 }
 
+.text-format {
+  white-space: pre-wrap;
+}
+
 .hero {
   .hero-text {
     height: 83vh;
@@ -122,25 +126,41 @@ nav {
   .item-list {
     .row {
       .card {
-        border: none;
-        margin-top: 7rem;
-        border-radius: 0px 50px;
-        height: 70%;
-        img {
-          margin-top: -7rem;
+        &.d-lg-none {
+          border: none;
+          border-radius: 0px 30px;
+          height: 100%;
+          padding: 0 15px;
+          padding-top: 10px;
+          .card-body {
+            padding: 0px;
+            padding-bottom: 10px;
+          }
         }
-        h4 {
-          margin-top: 1rem;
-        }
-        .card-img-top {
-          height: auto;
-          width: 80%;
-        }
-        .card-body {
-          margin-top: -1rem;
-        }
-        .card-text {
-          font-weight: lighter;
+        &.d-lg-block {
+          border: none;
+          margin-top: 6rem;
+          border-radius: 0px 50px;
+          height: 70%;
+          padding: 0 15px;
+          img {
+            margin-top: -6rem;
+          }
+          h4 {
+            margin-top: 1rem;
+          }
+          .card-img-top {
+            height: auto;
+            width: 80%;
+          }
+          .card-body {
+            margin-top: -1rem;
+            padding: 0px;
+            padding-bottom: 10px;
+          }
+          .card-text {
+            font-weight: lighter;
+          }
         }
       }
     }
@@ -183,4 +203,52 @@ nav {
 
 .footer {
   height: 25vh;
+}
+
+.content-menu {
+  margin-top: -50vh;
+  padding: 10vh 0;
+  .row {
+    .card {
+      &.d-lg-none {
+        border: none;
+        border-radius: 0px 30px;
+        height: 100%;
+        padding: 0 15px;
+        padding-top: 10px;
+        .card-text {
+          font-weight: lighter;
+        }
+        .card-body {
+          padding: 0;
+          padding-bottom: 10px;
+        }
+      }
+      &.d-lg-block {
+        border: none;
+        margin-top: 6rem;
+        border-radius: 0px 50px;
+        height: 70%;
+        padding: 0 15px;
+        img {
+          margin-top: -6rem;
+        }
+        h4 {
+          margin-top: 1rem;
+        }
+        .card-img-top {
+          height: auto;
+          width: 80%;
+        }
+        .card-body {
+          margin-top: -1rem;
+          padding: 0;
+          padding-bottom: 10px;
+        }
+        .card-text {
+          font-weight: lighter;
+        }
+      }
+    }
+  }
 }
