@@ -189,14 +189,18 @@ nav {
       width: 445px;
     }
     .about-1 {
-      bottom: 0;
-      left: 0;
-      margin-bottom: 5rem;
+      // bottom: 0;
+      // left: 0;
+      // margin-bottom: 5rem; */
+      margin-top: 20vh;
+      margin-left: -26vh;
     }
     .about-3 {
-      bottom: 0;
-      right: 0;
-      margin-bottom: 8rem;
+      // bottom: 0;
+      // right: 0;
+      // margin-bottom: 8rem; */
+      margin-top: -10vh;
+      margin-left: 30vh;
     }
   }
 }
@@ -277,6 +281,6 @@ nav {
 
 .book-now {
   .form-control {
-    min-width: 200px;
+    // min-width: 200px;
   }
 }

@@ -25,13 +25,7 @@ export default class index extends Component {
   }
   componentDidMount() {
     document.title = `Kaikaya by The Sea - ${data.title}`;
-    this.setState({
-      desclaimer: data.english.desclaimer,
-      options: data.english.options,
-      warning: data.english.warning,
-      infoStore: data.english.infoStore,
-      note: data.english.note,
-    });
+    this.changeLanguage();
     window.scrollTo(0, 0);
   }
   changeLanguage = () => {
@@ -54,9 +48,9 @@ export default class index extends Component {
         });
   };
   getDesclaimer = () => {
-    return this.state.onDesclaimer !== true
-      ? this.setState({ onDesclaimer: true })
-      : this.setState({ onDesclaimer: false });
+    return this.setState((prevState) => ({
+      onDesclaimer: !prevState.onDesclaimer,
+    }));
   };
 
   render() {
