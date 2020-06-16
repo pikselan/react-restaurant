@@ -7,6 +7,7 @@ import MenuPage from "./pages/MenuPage";
 import GalleryPage from "./pages/GalleryPage";
 import AboutPage from "./pages/AboutPage";
 import BookPage from "./pages/BookPage";
+import BookNow from "./pages/BookPage/BookNow";
 import NotFoundPage from "./pages/NotFoundPage";
 
 import "./assets/scss/styles.scss";
@@ -24,6 +25,7 @@ export default class App extends Component {
           <Route path="/gallery" component={GalleryPage} />
           <Route path="/about" component={AboutPage} />
           <Route path="/book" component={BookPage} />
+          <Route path="/booknow" component={BookNow} />
           <Route component={NotFoundPage} />
         </Switch>
       </Router>

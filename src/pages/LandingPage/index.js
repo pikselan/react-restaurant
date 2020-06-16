@@ -44,7 +44,7 @@ export default class index extends Component {
                     <h1 className="hero-h1 h2 text-primary font-weight-bold d-sm-block d-lg-none">
                       {data.heading}
                     </h1>
-                    <h1 className="hero-h1 display-3 text-primary font-weight-bold d-none d-lg-block">
+                    <h1 className="hero-h1 display-4 text-primary font-weight-bold d-none d-lg-block">
                       {data.heading}
                     </h1>
                   </Fade>
@@ -52,7 +52,7 @@ export default class index extends Component {
                     <h2 className="mt-4 h6 d-sm-block d-lg-none">
                       {data.description}
                     </h2>
-                    <h2 className="mt-4 h2 d-none d-lg-block">
+                    <h2 className="mt-4 h5 d-none d-lg-block">
                       {data.description}
                     </h2>
                   </Fade>
@@ -81,7 +81,7 @@ export default class index extends Component {
               />
             </div>
             <div className="hero-image col-12 col-md-4 col-lg-6 d-none d-md-block">
-              <div className="plate-under mx-auto">
+              <div className="plate-under mx-auto middle">
                 <Fade delay={200}>
                   <img
                     style={{ maxHeight: "806px", height: "84vh" }}
@@ -140,7 +140,7 @@ export default class index extends Component {
                     <h2 className="h6 mt-4 text-gray d-sm-block d-lg-none">
                       {data.content.description}
                     </h2>
-                    <h2 className="h4 mt-4 text-gray d-none d-lg-block">
+                    <h2 className="h5 mt-4 text-gray d-none d-lg-block">
                       {data.content.description}
                     </h2>
                     <Button
@@ -198,8 +198,8 @@ export default class index extends Component {
                             src={item.image}
                             alt=""
                           />
-                          <h4 className="card-title">{item.title}</h4>
-                          <div className="card-body">
+                          <h4 className="card-title h5">{item.title}</h4>
+                          <div className="small card-body">
                             <p className="card-text text-truncate">
                               {item.description}
                             </p>
@@ -261,7 +261,7 @@ export default class index extends Component {
                   </div>
                 </div>
                 <div className="col-md-8 row d-none d-md-block">
-                  <div className="about-2 mx-auto">
+                  <div className="about-2 mx-auto middle">
                     <Fade>
                       <img
                         style={{ maxHeight: "725px", height: "74vh" }}
@@ -269,24 +269,24 @@ export default class index extends Component {
                         alt="About2"
                       />
                     </Fade>
-                  </div>
 
-                  <Fade left>
-                    <img
-                      className="about-1 position-absolute"
-                      style={{ maxHeight: "221px", height: "12vw" }}
-                      src={data.about.image1}
-                      alt="About1"
-                    />
-                  </Fade>
-                  <Fade right>
-                    <img
-                      className="about-3 position-absolute"
-                      style={{ maxHeight: "285px", height: "15vw" }}
-                      src={data.about.image3}
-                      alt="About3"
-                    />
-                  </Fade>
+                    <Fade left>
+                      <img
+                        className="about-1 position-absolute"
+                        style={{ maxHeight: "221px", height: "12vw" }}
+                        src={data.about.image1}
+                        alt="About1"
+                      />
+                    </Fade>
+                    <Fade right>
+                      <img
+                        className="about-3 position-absolute"
+                        style={{ maxHeight: "285px", height: "15vw" }}
+                        src={data.about.image3}
+                        alt="About3"
+                      />
+                    </Fade>
+                  </div>
                 </div>
               </div>
             </div>

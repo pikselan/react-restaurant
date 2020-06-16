@@ -145,7 +145,7 @@ nav {
           border: none;
           margin-top: 6rem;
           border-radius: 0px 50px;
-          height: 70%;
+          height: 63%;
           padding: 0 15px;
           img {
             margin-top: -6rem;
@@ -273,4 +273,10 @@ nav {
 .content-book {
   margin-top: -65vh;
   padding: 10vh 0;
+}
+
+.book-now {
+  .form-control {
+    min-width: 200px;
+  }
 }

@@ -6,7 +6,7 @@ export default function Logo() {
     <img
       src={Brand}
       alt="Kaikaya By The Sea"
-      style={{ height: "10vh", maxWidth: "212px", maxHeight: "100px" }}
+      style={{ height: "7vh", maxWidth: "212px", maxHeight: "100px" }}
     />
   );
 }

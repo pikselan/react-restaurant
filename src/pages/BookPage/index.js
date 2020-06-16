@@ -152,14 +152,14 @@ export default class index extends Component {
                       <p className="text-info">{data.desclaimer.confirm}</p>
 
                       <Button
-                        className="btn btn-primary"
+                        className="btn btn-primary mb-3"
                         type="link"
                         href="/booknow"
                       >
                         進む / Proceed
                       </Button>
                       <Button
-                        className="btn btn-outline-secondary ml-3"
+                        className="btn btn-outline-secondary ml-3 mb-3"
                         onClick={this.getDesclaimer}
                       >
                         進まない / Don’t proceed.
