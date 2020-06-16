@@ -140,6 +140,23 @@ export default class index extends Component {
                 <div className="col-md-6 middle mt-5">
                   <div className="d-block">
                     <p className="text-primary">Make a reservation</p>
+                    <div className="input-group mb-2">
+                      <div className="input-group-prepend">
+                        <div className="input-group-text bg-primary">
+                          <img src={IcDate} alt="" />
+                        </div>
+                      </div>
+                      <input
+                        type="date"
+                        className="form-control"
+                        name="date"
+                        value={date}
+                        onChange={this.handleChange}
+                        placeholder="Date"
+                        min={this.getMinDate()}
+                        max={this.getMaxDate()}
+                      />
+                    </div>
                     <div className="form-group">
                       <div className="input-group mb-2">
                         <div className="input-group-prepend">
@@ -164,23 +181,6 @@ export default class index extends Component {
                             );
                           })}
                         </select>
-                      </div>
-                      <div className="input-group mb-2">
-                        <div className="input-group-prepend">
-                          <div className="input-group-text bg-primary">
-                            <img src={IcDate} alt="" />
-                          </div>
-                        </div>
-                        <input
-                          type="date"
-                          className="form-control"
-                          name="date"
-                          value={date}
-                          onChange={this.handleChange}
-                          placeholder="Date"
-                          min={this.getMinDate()}
-                          max={this.getMaxDate()}
-                        />
                       </div>
                       <div
                         className="input-group mb-2"
@@ -296,6 +296,7 @@ export default class index extends Component {
                           <input
                             type="email"
                             className="form-control"
+                            pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/"
                             name="email"
                             value={email}
                             onChange={this.handleChange}
@@ -314,6 +315,7 @@ export default class index extends Component {
                             type="tel"
                             className="form-control"
                             name="phone"
+                            pattern="[0-9]*"
                             value={phone}
                             onChange={this.handleChange}
                             placeholder="Phone"
