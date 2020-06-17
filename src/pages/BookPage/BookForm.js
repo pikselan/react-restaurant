@@ -144,138 +144,142 @@ export default function BookForm(props) {
         </div>
       </Fade>
       <div className={`col-12 text-center ${isSelecTime ? "" : " d-none"}`}>
-        <h4>Select Time :</h4>
-        {data.timeAvailable.map((item, index) => {
-          return (
-            <div
-              className="btn btn-outline-primary ml-2 mb-2"
-              key={`time-${index}`}
-              onClick={(e) => onFillDetail(item)}
-              value={item}
-            >
-              {item}
-            </div>
-          );
-        })}
+        <Fade bottom delay={400}>
+          <h4>Select Time :</h4>
+          {data.timeAvailable.map((item, index) => {
+            return (
+              <div
+                className="btn btn-outline-primary ml-2 mb-2"
+                key={`time-${index}`}
+                onClick={(e) => onFillDetail(item)}
+                value={item}
+              >
+                {item}
+              </div>
+            );
+          })}
+        </Fade>
       </div>
       <div className={`col-12 ${isFillDetail ? "" : " d-none"}`}>
         <div className="d-block">
-          <h4 className="text-center">Personal detail :</h4>
-          <div className="form-group">
-            <div className="row">
-              <div className="col-md-4 middle">
-                <div className="input-group mb-2">
-                  <div className="input-group-prepend">
-                    <div className="input-group-text bg-primary">
-                      <img src={IcTag} alt="" />
+          <Fade bottom delay={400}>
+            <h4 className="text-center">Personal detail :</h4>
+            <div className="form-group">
+              <div className="row">
+                <div className="col-md-4 middle">
+                  <div className="input-group mb-2">
+                    <div className="input-group-prepend">
+                      <div className="input-group-text bg-primary">
+                        <img src={IcTag} alt="" />
+                      </div>
                     </div>
+                    <select
+                      className="custom-select"
+                      value={tag}
+                      name="tag"
+                      onChange={handleChange}
+                    >
+                      <option value="" disabled>
+                        Select tag
+                      </option>
+                      <option value="Mr">Mr.</option>
+                      <option value="Mrs">Mrs.</option>
+                      <option value="Ms">Ms.</option>
+                      <option value="Dr">Dr.</option>
+                      <option value="Mdm">Mdm.</option>
+                    </select>
                   </div>
-                  <select
-                    className="custom-select"
-                    value={tag}
-                    name="tag"
-                    onChange={handleChange}
-                  >
-                    <option value="" disabled>
-                      Select tag
-                    </option>
-                    <option value="Mr">Mr.</option>
-                    <option value="Mrs">Mrs.</option>
-                    <option value="Ms">Ms.</option>
-                    <option value="Dr">Dr.</option>
-                    <option value="Mdm">Mdm.</option>
-                  </select>
                 </div>
-              </div>
-              <div className="col-md-4 middle">
-                <div className="input-group mb-2">
-                  <div className="input-group-prepend">
-                    <div className="input-group-text bg-primary">
-                      <img src={IcPerson} alt="" />
+                <div className="col-md-4 middle">
+                  <div className="input-group mb-2">
+                    <div className="input-group-prepend">
+                      <div className="input-group-text bg-primary">
+                        <img src={IcPerson} alt="" />
+                      </div>
                     </div>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="firstName"
+                      value={firstName}
+                      onChange={handleChange}
+                      placeholder="Fist Name"
+                    />
                   </div>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="firstName"
-                    value={firstName}
-                    onChange={handleChange}
-                    placeholder="Fist Name"
-                  />
                 </div>
-              </div>
-              <div className="col-md-4 middle">
-                <div className="input-group mb-2">
-                  <div className="input-group-prepend">
-                    <div className="input-group-text bg-primary">
-                      <img src={IcPersonLast} alt="" />
+                <div className="col-md-4 middle">
+                  <div className="input-group mb-2">
+                    <div className="input-group-prepend">
+                      <div className="input-group-text bg-primary">
+                        <img src={IcPersonLast} alt="" />
+                      </div>
                     </div>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="lastName"
+                      value={lastName}
+                      onChange={handleChange}
+                      placeholder="Last Name"
+                    />
                   </div>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="lastName"
-                    value={lastName}
-                    onChange={handleChange}
-                    placeholder="Last Name"
-                  />
                 </div>
-              </div>
-              <div className="col-md-6 middle">
-                <div className="input-group mb-2">
-                  <div className="input-group-prepend">
-                    <div className="input-group-text bg-primary">
-                      <img src={IcMail} alt="" />
+                <div className="col-md-6 middle">
+                  <div className="input-group mb-2">
+                    <div className="input-group-prepend">
+                      <div className="input-group-text bg-primary">
+                        <img src={IcMail} alt="" />
+                      </div>
                     </div>
+                    <input
+                      type="email"
+                      className="form-control"
+                      pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/"
+                      name="email"
+                      value={email}
+                      onChange={handleChange}
+                      placeholder="Email"
+                    />
                   </div>
-                  <input
-                    type="email"
-                    className="form-control"
-                    pattern="/^[^\s@]+@[^\s@]+\.[^\s@]+$/"
-                    name="email"
-                    value={email}
-                    onChange={handleChange}
-                    placeholder="Email"
-                  />
                 </div>
-              </div>
-              <div className="col-md-6 middle">
-                <div className="input-group mb-2">
-                  <div className="input-group-prepend">
-                    <div className="input-group-text bg-primary">
-                      <img src={IcNumber} alt="" />
+                <div className="col-md-6 middle">
+                  <div className="input-group mb-2">
+                    <div className="input-group-prepend">
+                      <div className="input-group-text bg-primary">
+                        <img src={IcNumber} alt="" />
+                      </div>
                     </div>
+                    <input
+                      type="tel"
+                      className="form-control"
+                      name="phone"
+                      pattern="[0-9]*"
+                      value={phone}
+                      onChange={handleChange}
+                      placeholder="Phone"
+                    />
                   </div>
-                  <input
-                    type="tel"
-                    className="form-control"
-                    name="phone"
-                    pattern="[0-9]*"
-                    value={phone}
-                    onChange={handleChange}
-                    placeholder="Phone"
-                  />
                 </div>
-              </div>
-              <div className="col-12 middle">
-                <div className="input-group mb-2">
-                  <div className="input-group-prepend">
-                    <div className="input-group-text bg-primary">
-                      <img src={IcInfo} alt="" />
+                <div className="col-12 middle">
+                  <div className="input-group mb-2">
+                    <div className="input-group-prepend">
+                      <div className="input-group-text bg-primary">
+                        <img src={IcInfo} alt="" />
+                      </div>
                     </div>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="info"
+                      value={info}
+                      onChange={handleChange}
+                      placeholder="Info or Request"
+                    />
                   </div>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="info"
-                    value={info}
-                    onChange={handleChange}
-                    placeholder="Info or Request"
-                  />
                 </div>
               </div>
             </div>
-          </div>
+          </Fade>
         </div>
       </div>
       <div className="col-12 middle my-5">

@@ -10,24 +10,22 @@ import BookBg from "../../assets/images/list-bg.svg";
 import data from "../../json/BookPage.json";
 
 export default class index extends Component {
-  constructor(props) {
-    super(props);
+  state = {
+    lang: "Japanese",
+    desclaimer: null,
+    options: null,
+    warning: null,
+    infoStore: null,
+    note: null,
+    onDesclaimer: false,
+  };
 
-    this.state = {
-      lang: "Japanese",
-      desclaimer: null,
-      options: null,
-      warning: null,
-      infoStore: null,
-      note: null,
-      onDesclaimer: false,
-    };
-  }
   componentDidMount() {
     document.title = `Kaikaya by The Sea - ${data.title}`;
     this.changeLanguage();
     window.scrollTo(0, 0);
   }
+
   changeLanguage = () => {
     return this.state.lang !== "Japanese"
       ? this.setState({

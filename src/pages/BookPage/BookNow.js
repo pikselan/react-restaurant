@@ -11,6 +11,11 @@ import Bg from "../../assets/images/about-bg.svg";
 import data from "../../json/DataBooking.json";
 
 export default class index extends Component {
+  componentDidMount() {
+    document.title = `Kaikaya by The Sea - ${data.title}`;
+    window.scrollTo(0, 0);
+  }
+
   state = {
     progress: "form",
     isSelecTime: false,
@@ -75,6 +80,10 @@ export default class index extends Component {
 
   toConfirmation = () => {
     this.setState({ progress: "confirmation" });
+  };
+
+  toComplete = () => {
+    this.setState({ progress: "complete" });
   };
 
   render() {
