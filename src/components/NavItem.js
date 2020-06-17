@@ -24,7 +24,7 @@ export default function NavItem(props) {
           </Button>
         </li>
         <li className={`nav-item`}>
-          <Button href={`/book`} type="link" className="nav-link">
+          <Button type="link" className="nav-link" href="#contact" isExternal>
             Contact
           </Button>
         </li>

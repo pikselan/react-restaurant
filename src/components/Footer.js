@@ -25,7 +25,7 @@ export default function Footer(props) {
         <Fade left>
           <div className="col-md-4" id="contact">
             <div className="justify-content-start">
-              <div className="col-12 row">
+              <div className="col-12 row justify-content-center">
                 <Button
                   href={`tel:+81337700878`}
                   type="link"
@@ -43,7 +43,7 @@ export default function Footer(props) {
                   <h6 className="ml-3 my-2">+81-3-3770-0878</h6>
                 </Button>
               </div>
-              <div className="col-12 row">
+              <div className="col-12 row justify-content-center">
                 <img src={IcMap} alt="Map" className="d-none d-lg-block" />
                 <span className="ml-3 my-2">
                   <small>23-7 Maruyama-cho, Shibuya-ku, Tokyo</small>
@@ -63,16 +63,16 @@ export default function Footer(props) {
             </nav>
 
             <span className="font-weight-light">
-              <small>Copyright @ 2020 Kaikaya By The Sea</small>
+              <small>Copyright &copy; 2020 Kaikaya By The Sea</small>
             </span>
           </div>
         </Fade>
         <Fade right>
           <div className="col-md-4">
             <div className="d-none d-md-block">
-              <Social className="col-12 row justify-content-end" />
+              <Social className="col-12 row  justify-content-center" />
             </div>
-            <div className="col-12 row justify-content-end">
+            <div className="col-12 row  justify-content-center">
               <p className="mr-3 my-2 font-weight-light">
                 <small>Privacy Policy</small>
               </p>
