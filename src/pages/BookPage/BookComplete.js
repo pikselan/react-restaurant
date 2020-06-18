@@ -15,14 +15,13 @@ export default function BookComplete(props) {
             alt=""
             width="100%"
             style={{ maxWidth: "370px" }}
-            className="d-none d-md-block"
           />
         </div>
         <div className="col-12 middle mt-5 text-center">
           <Fade bottom delay={400}>
             <p className="h4">
               {`Thanks for reservation, we send your information to
-              "${props.email}". We will call you to information before day.`}
+              "${props.email}". We will call you to information before the day.`}
             </p>
           </Fade>
         </div>

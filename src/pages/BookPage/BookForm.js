@@ -29,6 +29,7 @@ export default function BookForm(props) {
     email,
     phone,
     info,
+    timeAvailable,
     formCompleted,
   } = props;
 
@@ -146,7 +147,7 @@ export default function BookForm(props) {
       <div className={`col-12 text-center ${isSelecTime ? "" : " d-none"}`}>
         <Fade bottom delay={400}>
           <h4>Select Time :</h4>
-          {data.timeAvailable.map((item, index) => {
+          {timeAvailable.map((item, index) => {
             return (
               <div
                 className="btn btn-outline-primary ml-2 mb-2"

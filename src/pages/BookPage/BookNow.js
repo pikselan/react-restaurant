@@ -105,6 +105,7 @@ export default class index extends Component {
               <BookForm
                 {...this.state}
                 data={data}
+                timeAvailable={data.timeAvailable}
                 onSelectTime={this.onSelectTime}
                 onFillDetail={this.onFillDetail}
                 handleChange={this.handleChange}

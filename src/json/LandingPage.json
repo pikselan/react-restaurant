@@ -3,9 +3,9 @@
   "heading": "Treasure Every Encounter, For It Will Never Recur.",
   "description": "You are \"by the ocean\" wherever you are, For Japan is surrounded by the ocean. Fish caught in the morning is on the table in the evening.",
   "hero": {
-    "image1": "assets/images/plate-under.png",
-    "image2": "assets/images/plate-1.png",
-    "image3": "assets/images/plate-2.png"
+    "image1": "/assets/images/plate-under.png",
+    "image2": "/assets/images/plate-1.png",
+    "image3": "/assets/images/plate-2.png"
   },
   "content": {
     "imagePrimary": "assets/images/menu-first.png",
@@ -41,10 +41,12 @@
     "image2": "assets/images/about-2.png",
     "image3": "assets/images/about-3.png"
   },
-  "review": {
-    "title": "My favorite Sea food restaurant in Japan!",
-    "description": "I love this restaurant because it’s calm and authentic. The service is excellent and I’ve always enjoyed the variety of dishes they offer.",
-    "name": "Satoshi Kimura",
-    "from": "Tokyo, Japan"
-  }
+  "review": [
+    {
+      "title": "My favorite Sea food restaurant in Japan!",
+      "description": "I love this restaurant because it’s calm and authentic. The service is excellent and I’ve always enjoyed the variety of dishes they offer.",
+      "name": "Satoshi Kimura",
+      "from": "Tokyo, Japan"
+    }
+  ]
 }

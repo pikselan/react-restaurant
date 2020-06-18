@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
+// import axios from "axios";
 
 import Social from "../../components/Social";
 import Footer from "../../components/Footer";
@@ -19,11 +20,20 @@ import IcRight from "../../assets/images/ic-right.svg";
 import data from "../../json/LandingPage.json";
 
 export default class index extends Component {
+  state = {
+    data: [],
+  };
+
   componentDidMount() {
     document.title = `Kaikaya by The Sea - ${data.title}`;
     window.scrollTo(0, 0);
+    // axios.get("http://localhost:3000/v1/api/landing-page").then((res) => {
+    //   this.setState({ data: res.data });
+    // });
   }
+
   render() {
+    // const { data } = this.state;
     return (
       <div>
         <header className="container-fluid v-max">
@@ -223,8 +233,8 @@ export default class index extends Component {
           </section>
         </section>
         <section className="about container-fluid">
-          <div className="space-base container-fluid">
-            <div className="bg-base h-100 d-none d-md-block"></div>
+          <div className="space-base container-fluid d-none d-md-block">
+            <div className="bg-base h-100"></div>
           </div>
           <div
             className="container-fluid"
@@ -292,9 +302,9 @@ export default class index extends Component {
             </div>
           </div>
         </section>
-        <section className="container-fluid v-max">
+        <section className="content-bottom container-fluid">
           <section
-            className="review container border-bottom text-center middle"
+            className="review container text-center middle"
             style={{
               background: `url(${ReviewBg}) no-repeat center`,
               backgroundSize: "100% auto",
@@ -315,32 +325,34 @@ export default class index extends Component {
                   <Star className="col-12" />
                   <div className="col-12 mt-4">
                     <h5 className="h6 font-weight-bold text-primary d-sm-block d-lg-none">
-                      {data.review.title}
+                      {data.review[0].title}
                     </h5>
                     <h5 className="font-weight-bold text-primary d-none d-lg-block">
-                      {data.review.title}
+                      {data.review[0].title}
                     </h5>
                   </div>
                   <div className="col-12 mt-4">
                     <h5 className="h6 font-italic d-sm-block d-lg-none">
-                      {data.review.description}
+                      {data.review[0].description}
                     </h5>
                     <h5 className="font-italic d-none d-lg-block">
-                      {data.review.description}
+                      {data.review[0].description}
                     </h5>
                   </div>
                   <div className="col-12 mt-4">
                     <div className="d-sm-block d-lg-none">
                       <h6>
-                        {`${data.review.name}. `}
+                        {`${data.review[0].name}. `}
                         <span className="font-weight-light">
-                          {data.review.fom}
+                          {data.review[0].fom}
                         </span>
                       </h6>
                     </div>
                     <div className="d-none d-lg-block">
-                      <h5>{`${data.review.name}. `}</h5>
-                      <h5 className="font-weight-light">{data.review.from}</h5>
+                      <h5>{`${data.review[0].name}. `}</h5>
+                      <h5 className="font-weight-light">
+                        {data.review[0].from}
+                      </h5>
                     </div>
                   </div>
                   <div className="col-12 mt-4 d-none d-sm-block">

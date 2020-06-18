@@ -13,7 +13,7 @@ export default function Footer(props) {
     document.documentElement.scrollTop = 0;
   };
   return (
-    <footer className="footer container-fluid middle">
+    <footer className="footer container-fluid middle border-top">
       <div className="row w-100">
         <Fade bottom>
           <div className="col-12 text-center mb-2">
