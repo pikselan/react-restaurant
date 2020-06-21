@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Fade from "react-reveal";
 // import axios from "axios";
 
-import Social from "../../components/Social";
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import Button from "../../components/Button";
@@ -16,6 +15,9 @@ import ReviewBg from "../../assets/images/review-bg.svg";
 import IcTripadvisor from "../../assets/images/ic-tripadvisor.svg";
 import IcLeft from "../../assets/images/ic-left.svg";
 import IcRight from "../../assets/images/ic-right.svg";
+import IcMap from "../../assets/images/ic-map-circle.svg";
+import IcPhone from "../../assets/images/ic-phone-circle.svg";
+import IcTime from "../../assets/images/ic-time-circle.svg";
 
 import data from "../../json/LandingPage.json";
 
@@ -36,12 +38,28 @@ export default class index extends Component {
     // const { data } = this.state;
     return (
       <div>
-        <header className="container-fluid v-max">
+        <header className="hero container-fluid v-max">
           <Fade bottom>
             <Nav pathname={this.props.location.pathname} />
           </Fade>
-          <div className="hero row">
-            <div className="hero-text col-12 col-md-8 col-lg-6">
+          <Fade left delay={600}>
+            <img
+              className="plate-2 position-absolute d-none d-md-block"
+              style={{ maxHeight: "466px", height: "24vw" }}
+              src={data.hero.image3}
+              alt="Food 2"
+            />
+          </Fade>
+          <Fade right delay={400}>
+            <img
+              className="plate-1 position-absolute d-none d-md-block"
+              style={{ maxHeight: "427px", height: "22vw" }}
+              src={data.hero.image2}
+              alt="Food 1"
+            />
+          </Fade>
+          <div className="row middle">
+            <div className="hero-text col-12 col-md-8 col-lg-6 text-center">
               <div
                 className="hero-bg"
                 style={{
@@ -70,7 +88,7 @@ export default class index extends Component {
                     <Button
                       href={`/book`}
                       type="link"
-                      className="btn btn-primary d-md-none mr-3 mt-4"
+                      className="btn btn-primary d-md-none mt-5"
                     >
                       Book a Table
                     </Button>
@@ -84,37 +102,30 @@ export default class index extends Component {
                   </Fade>
                 </div>
               </div>
-              <Social
-                className="hero-icon row position-absolute w-100"
-                withMiniTripadvisor
-                withPhone
-              />
             </div>
-            <div className="hero-image col-12 col-md-4 col-lg-6 d-none d-md-block">
-              <div className="plate-under mx-auto middle">
-                <Fade delay={200}>
-                  <img
-                    style={{ maxHeight: "806px", height: "84vh" }}
-                    src={data.hero.image1}
-                    alt="Front Store"
-                  />
-                </Fade>
-
-                <Fade left delay={600}>
-                  <img
-                    className="plate-2 position-absolute"
-                    style={{ maxHeight: "386px", height: "24vw" }}
-                    src={data.hero.image3}
-                    alt="Food 2"
-                  />
-                </Fade>
-                <Fade right delay={400}>
-                  <img
-                    className="plate-1 position-absolute"
-                    style={{ maxHeight: "350px", height: "22vw" }}
-                    src={data.hero.image2}
-                    alt="Food 1"
-                  />
+            <div className="hero-icon col-12 position-absolute w-100 text-center d-none d-md-block">
+              <div className="row">
+                <Fade bottom delay={600}>
+                  <div className="col-4">
+                    <Button href={`#`} type="link" isDisabled>
+                      <img src={IcTime} alt="Facebook" />
+                      <p className="mt-1">Open Today 5:00 PM ~11:30PM</p>
+                    </Button>
+                  </div>
+                  <div className="col-4 border-left border-right">
+                    <Button href={`#`} type="link" isDisabled>
+                      <img src={IcMap} alt="Facebook" />
+                      <p className="mt-1">
+                        23-7 Maruyama-cho, Shibuya-ku, Tokyo
+                      </p>
+                    </Button>
+                  </div>
+                  <div className="col-4">
+                    <Button href={`#`} type="link" isDisabled>
+                      <img src={IcPhone} alt="Facebook" />
+                      <p className="mt-1">+81-3-3770-0878</p>
+                    </Button>
+                  </div>
                 </Fade>
               </div>
             </div>
@@ -276,6 +287,7 @@ export default class index extends Component {
                       <img
                         style={{ maxHeight: "725px", height: "74vh" }}
                         src={data.about.image2}
+                        className="blur-image"
                         alt="About2"
                       />
                     </Fade>

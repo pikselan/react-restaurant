@@ -47,6 +47,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -101,30 +102,27 @@ nav {
         }
       }
     }
-    .hero-icon {
-      bottom: 0px;
-      margin-left: 0;
-      margin-bottom: 1rem;
-    }
   }
-  .hero-image {
-    .plate-under {
-      width: 445px;
-    }
-    .plate-1 {
-      top: 0;
-      right: 0;
-      margin-top: 30px;
-    }
-    .plate-2 {
-      bottom: 0;
-      left: 0;
-      margin-bottom: 30px;
-    }
+  .plate-1 {
+    right: -50px;
+    margin-top: 20vh;
+  }
+  .plate-2 {
+    left: -50px;
+    margin-top: 18px;
+  }
+  .hero-icon {
+    bottom: 0px;
+    // margin-left: 0;
+    margin-bottom: 1vh;
   }
 }
 
 .content-base {
+  @media only screen and (max-width: 768px) {
+    margin-top: 0;
+    padding-top: 1rem;
+  }
   margin-top: -15vh;
   padding-top: 15vh;
   .item-list {
@@ -181,6 +179,7 @@ nav {
   padding-left: 0;
   .space-base {
     height: 20vh;
+    padding: 0;
   }
   .about-margin {
     @media only screen and (max-width: 768px) {
@@ -208,6 +207,12 @@ nav {
       // margin-bottom: 8rem; */
       margin-top: -10vh;
       margin-left: 30vh;
+    }
+    .blur-image {
+      filter: blur(2px);
+      &:hover {
+        filter: blur(0px);
+      }
     }
   }
 }
