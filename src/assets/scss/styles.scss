@@ -191,7 +191,7 @@ nav {
     .about-title {
       white-space: pre-wrap;
     }
-    .about-2 {
+    .hero-about {
       width: 445px;
     }
     .about-1 {
@@ -208,8 +208,8 @@ nav {
       margin-top: -10vh;
       margin-left: 30vh;
     }
-    .blur-image {
-      filter: blur(2px);
+    .about-big {
+      filter: blur(0px);
       &:hover {
         filter: blur(0px);
       }

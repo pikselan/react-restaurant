@@ -282,30 +282,13 @@ export default class index extends Component {
                   </div>
                 </div>
                 <div className="col-md-8 row d-none d-md-block">
-                  <div className="about-2 mx-auto middle">
-                    <Fade>
+                  <div className="hero-about mx-auto middle">
+                    <Fade bottom>
                       <img
                         style={{ maxHeight: "725px", height: "74vh" }}
                         src={data.about.image2}
-                        className="blur-image"
+                        className="about-big"
                         alt="About2"
-                      />
-                    </Fade>
-
-                    <Fade left>
-                      <img
-                        className="about-1 position-absolute"
-                        style={{ maxHeight: "221px", height: "12vw" }}
-                        src={data.about.image1}
-                        alt="About1"
-                      />
-                    </Fade>
-                    <Fade right>
-                      <img
-                        className="about-3 position-absolute"
-                        style={{ maxHeight: "285px", height: "15vw" }}
-                        src={data.about.image3}
-                        alt="About3"
                       />
                     </Fade>
                   </div>
