@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../store/actions/page";
+
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import Button from "../../components/Button";
 
 import BookBg from "../../assets/images/list-bg.svg";
 
-import data from "../../json/BookPage.json";
-
-export default class index extends Component {
+class index extends Component {
   state = {
+    data: null,
     lang: "Japanese",
     desclaimer: null,
     options: null,
@@ -21,28 +23,27 @@ export default class index extends Component {
   };
 
   componentDidMount() {
-    document.title = `Kaikaya by The Sea - ${data.title}`;
-    this.changeLanguage();
     window.scrollTo(0, 0);
+    if (!this.props.page.book) this.props.fetchPage(`/book`, "book");
   }
 
   changeLanguage = () => {
     return this.state.lang !== "Japanese"
       ? this.setState({
           lang: "Japanese",
-          desclaimer: data.english.desclaimer,
-          options: data.english.options,
-          warning: data.english.warning,
-          infoStore: data.english.infoStore,
-          note: data.english.note,
+          desclaimer: this.props.page.book.content.japanese.desclaimer,
+          options: this.props.page.book.content.japanese.options,
+          warning: this.props.page.book.content.japanese.warning,
+          infoStore: this.props.page.book.content.japanese.infoStore,
+          note: this.props.page.book.content.japanese.note,
         })
       : this.setState({
           lang: "English",
-          desclaimer: data.japanese.desclaimer,
-          options: data.japanese.options,
-          warning: data.japanese.warning,
-          infoStore: data.japanese.infoStore,
-          note: data.japanese.note,
+          desclaimer: this.props.page.book.content.english.desclaimer,
+          options: this.props.page.book.content.english.options,
+          warning: this.props.page.book.content.english.warning,
+          infoStore: this.props.page.book.content.english.infoStore,
+          note: this.props.page.book.content.english.note,
         });
   };
   getDesclaimer = () => {
@@ -61,8 +62,15 @@ export default class index extends Component {
       note,
       onDesclaimer,
     } = this.state;
+
+    const { page } = this.props;
+    if (!page.hasOwnProperty("book")) return null;
+    const data = page.book.content;
+    const url = process.env.REACT_APP_HOST;
+    const title = page.book.title;
+    document.title = `Kaikaya by The Sea - ${title}`;
     return (
-      <div>
+      <div onLoad={this.changeLanguage}>
         <header className="container-fluid v-max">
           <Fade bottom>
             <Nav pathname={this.props.location.pathname} />
@@ -76,10 +84,10 @@ export default class index extends Component {
           >
             <Fade bottom delay={300}>
               <h1 className="h2 text-primary font-weight-bold d-sm-block d-lg-none">
-                {data.title}
+                {title}
               </h1>
               <h1 className="display-3 text-primary font-weight-bold d-none d-lg-block">
-                {data.title}
+                {title}
               </h1>
             </Fade>
           </div>
@@ -90,7 +98,7 @@ export default class index extends Component {
               <Fade bottom>
                 <div className="col-md-6 mb-3">
                   <img
-                    src={data.imageFood}
+                    src={`${url}/${data.imageFood}`}
                     alt=""
                     width="100%"
                     style={{ maxWidth: "540px" }}
@@ -165,7 +173,7 @@ export default class index extends Component {
               <Fade bottom>
                 <div className="col-md-6 order-md-2 text-center mb-3">
                   <img
-                    src={data.imageMap}
+                    src={`${url}/${data.imageMap}`}
                     alt=""
                     width="100%"
                     style={{ maxWidth: "347px" }}
@@ -190,3 +198,9 @@ export default class index extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  page: state.page,
+});
+
+export default connect(mapStateToProps, { fetchPage })(index);
