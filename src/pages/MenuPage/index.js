@@ -1,19 +1,27 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../store/actions/page";
+
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 
 import MenuBg from "../../assets/images/about-bg.svg";
 
-import data from "../../json/MenuPage.json";
-
-export default class index extends Component {
+class index extends Component {
   componentDidMount() {
-    document.title = `Kaikaya by The Sea - ${data.title}`;
     window.scrollTo(0, 0);
+    if (!this.props.page.menu) this.props.fetchPage(`/menu`, "menu");
   }
   render() {
+    const { page } = this.props;
+    if (!page.hasOwnProperty("menu")) return null;
+    const main = page.menu.item[0];
+    const options = [page.menu.item[1], page.menu.item[2]];
+    const url = process.env.REACT_APP_HOST;
+    const title = page.menu.title;
+    document.title = `Kaikaya by The Sea - ${title}`;
     return (
       <div>
         <header
@@ -29,10 +37,10 @@ export default class index extends Component {
           <div className="container text-center">
             <Fade bottom delay={300}>
               <h1 className="h2 text-primary font-weight-bold d-sm-block d-lg-none">
-                {data.title}
+                {title}
               </h1>
               <h1 className="display-3 text-primary font-weight-bold d-none d-lg-block">
-                {data.title}
+                {title}
               </h1>
             </Fade>
           </div>
@@ -44,7 +52,7 @@ export default class index extends Component {
                 <div className="col-4 col-md-2 middle">
                   <Fade bottom delay={500}>
                     <img
-                      src={data.mainFood.image}
+                      src={`${url}/${main.image}`}
                       alt=""
                       style={{ width: "100%" }}
                       className="rounded"
@@ -54,10 +62,10 @@ export default class index extends Component {
                 <div className="col-8 col-md-10 middle justify-content-start">
                   <Fade bottom delay={700}>
                     <h1 className="h3 text-primary font-weight-bold d-sm-block d-lg-none">
-                      {data.mainFood.title}
+                      {main.title}
                     </h1>
                     <h1 className="display-4 text-primary font-weight-bold d-none d-lg-block">
-                      {data.mainFood.title}
+                      {main.title}
                     </h1>
                   </Fade>
                 </div>
@@ -66,7 +74,7 @@ export default class index extends Component {
             <div className="col-12 mt-4">
               <div className="row text-center">
                 <Fade bottom>
-                  {data.mainFood.item.map((item, index) => {
+                  {main.menuId.map((item, index) => {
                     return (
                       <div
                         className="col-6 col-md-3 mt-3"
@@ -75,7 +83,7 @@ export default class index extends Component {
                         <div className="card d-sm-block d-lg-none">
                           <img
                             className="mx-auto"
-                            src={item.image}
+                            src={`${url}/${item.image}`}
                             alt=""
                             style={{ width: "100%" }}
                           />
@@ -91,7 +99,7 @@ export default class index extends Component {
                         <div className="card d-none d-lg-block">
                           <img
                             className="card-img-top mx-auto"
-                            src={item.image}
+                            src={`${url}/${item.image}`}
                             alt=""
                           />
                           <h4 className="card-title">{item.name}</h4>
@@ -109,14 +117,14 @@ export default class index extends Component {
         </section>
         <section className="container">
           <div className="row mb-5">
-            {data.optionFood.map((option, index) => {
+            {options.map((option, index) => {
               return (
                 <div className="col-12 col-md-6 mt-5" key={`food-${index}`}>
                   <div className="row">
                     <div className="col-4 col-md-4 middle">
                       <Fade bottom delay={500}>
                         <img
-                          src={option.image}
+                          src={`${url}/${option.image}`}
                           alt=""
                           style={{
                             width: "auto",
@@ -139,7 +147,7 @@ export default class index extends Component {
                   </div>
                   <div className="col-12 my-3">
                     <ul className="list-group">
-                      {option.item.map((item, index) => {
+                      {option.menuId.map((item, index) => {
                         return (
                           <li className="list-group-item" key={`item-${index}`}>
                             {item.name}
@@ -155,7 +163,7 @@ export default class index extends Component {
         </section>
         <section className="text-format container my-5 py-3">
           <Fade bottom>
-            <p>{data.note}</p>
+            <p>{page.menu.note.note}</p>
           </Fade>
         </section>
         <section className="container-fluid">
@@ -165,3 +173,9 @@ export default class index extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  page: state.page,
+});
+
+export default connect(mapStateToProps, { fetchPage })(index);

@@ -21,23 +21,18 @@ import IcMap from "../../assets/images/ic-map-circle.svg";
 import IcPhone from "../../assets/images/ic-phone-circle.svg";
 import IcTime from "../../assets/images/ic-time-circle.svg";
 
-import data from "../../json/LandingPage.json";
-
 class index extends Component {
-  state = {
-    data: [],
-  };
-
   componentDidMount() {
-    document.title = `Kaikaya by The Sea - ${data.title}`;
     window.scrollTo(0, 0);
-
-    if (!this.props.page.landingPage)
-      this.props.fetchPage(`/landing`, "landingPage");
+    if (!this.props.page.landing) this.props.fetchPage(`/landing`, "landing");
   }
 
   render() {
-    // const { page } = this.props;
+    const { page } = this.props;
+    if (!page.hasOwnProperty("landing")) return null;
+    const data = page.landing.content;
+    const url = process.env.REACT_APP_HOST;
+    document.title = `Kaikaya by The Sea - ${page.landing.title}`;
     return (
       <div>
         <header className="hero container-fluid v-max">
@@ -48,7 +43,7 @@ class index extends Component {
             <img
               className="plate-2 position-absolute d-none d-md-block"
               style={{ maxHeight: "466px", height: "24vw" }}
-              src={data.hero.image3}
+              src={`${url}/${data.hero.image3}`}
               alt="Food 2"
             />
           </Fade>
@@ -56,7 +51,7 @@ class index extends Component {
             <img
               className="plate-1 position-absolute d-none d-md-block"
               style={{ maxHeight: "427px", height: "22vw" }}
-              src={data.hero.image2}
+              src={`${url}/${data.hero.image2}`}
               alt="Food 1"
             />
           </Fade>
@@ -145,7 +140,7 @@ class index extends Component {
               <div className="col-md-6 middle">
                 <Fade bottom>
                   <img
-                    src={data.content.imagePrimary}
+                    src={`${url}/${data.content.imagePrimary}`}
                     alt="Menu"
                     className="w-100"
                   />
@@ -288,7 +283,7 @@ class index extends Component {
                     <Fade bottom>
                       <img
                         style={{ maxHeight: "725px", height: "74vh" }}
-                        src={data.about.image2}
+                        src={`${url}/${data.about.image2}`}
                         className="about-big"
                         alt="About2"
                       />
