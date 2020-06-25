@@ -202,7 +202,7 @@ class index extends Component {
                         <div className="card d-sm-block d-lg-none">
                           <img
                             className="mx-auto"
-                            src={item.image}
+                            src={`${url}/${item.image}`}
                             alt=""
                             style={{ width: "100%" }}
                           />
@@ -213,7 +213,7 @@ class index extends Component {
                         <div className="card d-none d-lg-block">
                           <img
                             className="card-img-top mx-auto"
-                            src={item.image}
+                            src={`${url}/${item.image}`}
                             alt=""
                           />
                           <h4 className="card-title h5">{item.title}</h4>

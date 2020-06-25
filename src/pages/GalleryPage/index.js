@@ -1,20 +1,27 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
 
+import { connect } from "react-redux";
+import { fetchPage } from "../../store/actions/page";
+
 import Nav from "../../components/Nav";
 import Footer from "../../components/Footer";
 import Button from "../../components/Button";
 
 import GalleryBg from "../../assets/images/menu-bg.svg";
 
-import data from "../../json/GalleryPage.json";
-
-export default class index extends Component {
+class index extends Component {
   componentDidMount() {
-    document.title = `Kaikaya by The Sea - ${data.title}`;
     window.scrollTo(0, 0);
+    if (!this.props.page.gallery) this.props.fetchPage(`/gallery`, "gallery");
   }
   render() {
+    const { page } = this.props;
+    if (!page.hasOwnProperty("gallery")) return null;
+    const data = page.gallery;
+    const url = process.env.REACT_APP_HOST;
+    const title = page.gallery.title;
+    document.title = `Kaikaya by The Sea - ${title}`;
     return (
       <div>
         <header className="container-fluid v-max">
@@ -30,10 +37,10 @@ export default class index extends Component {
           >
             <Fade bottom delay={300}>
               <h1 className="h2 text-primary font-weight-bold d-sm-block d-lg-none">
-                {data.title}
+                {title}
               </h1>
               <h1 className="display-3 text-primary font-weight-bold d-none d-lg-block">
-                {data.title}
+                {title}
               </h1>
             </Fade>
           </div>
@@ -50,7 +57,11 @@ export default class index extends Component {
                         key={`gallery-${index}`}
                       >
                         <div className="col-3 card-header border-0">
-                          <img src={item.image} alt="" width="100%" />
+                          <img
+                            src={`${url}/${item.image}`}
+                            alt=""
+                            width="100%"
+                          />
                         </div>
                         <div className="col-9 card-block px-2 py-3">
                           <h4 className="h5 card-title text-primary font-weight-bold mb-0 d-sm-block d-lg-none">
@@ -88,3 +99,9 @@ export default class index extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  page: state.page,
+});
+
+export default connect(mapStateToProps, { fetchPage })(index);
