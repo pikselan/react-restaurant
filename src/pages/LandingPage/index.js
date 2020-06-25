@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
-// import axios from "axios";
+
+import { connect } from "react-redux";
+import { fetchPage } from "../../store/actions/page";
 
 import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
@@ -21,7 +23,7 @@ import IcTime from "../../assets/images/ic-time-circle.svg";
 
 import data from "../../json/LandingPage.json";
 
-export default class index extends Component {
+class index extends Component {
   state = {
     data: [],
   };
@@ -29,13 +31,13 @@ export default class index extends Component {
   componentDidMount() {
     document.title = `Kaikaya by The Sea - ${data.title}`;
     window.scrollTo(0, 0);
-    // axios.get("http://localhost:3000/v1/api/landing-page").then((res) => {
-    //   this.setState({ data: res.data });
-    // });
+
+    if (!this.props.page.landingPage)
+      this.props.fetchPage(`/landing`, "landingPage");
   }
 
   render() {
-    // const { data } = this.state;
+    // const { page } = this.props;
     return (
       <div>
         <header className="hero container-fluid v-max">
@@ -372,3 +374,9 @@ export default class index extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  page: state.page,
+});
+
+export default connect(mapStateToProps, { fetchPage })(index);
