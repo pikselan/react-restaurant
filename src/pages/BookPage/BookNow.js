@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
+import axios from "axios";
 
 import Nav from "../../components/Nav";
 import BookForm from "./BookForm";
@@ -8,15 +9,13 @@ import BookComplete from "./BookComplete";
 
 import Bg from "../../assets/images/about-bg.svg";
 
-import data from "../../json/DataBooking.json";
+// import data from "../../json/DataBooking.json";
 
 export default class index extends Component {
-  componentDidMount() {
-    document.title = `Kaikaya by The Sea - ${data.title}`;
-    window.scrollTo(0, 0);
-  }
-
   state = {
+    title: "開花屋, Booking!",
+    peopleList: null,
+    timeList: null,
     progress: "form",
     isSelecTime: false,
     isFillDetail: false,
@@ -24,12 +23,32 @@ export default class index extends Component {
     peoples: "",
     date: "",
     time: "",
+    timeId: "",
     tag: "",
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
     info: "",
+  };
+
+  componentDidMount() {
+    document.title = `Kaikaya by The Sea - ${this.state.title}`;
+    window.scrollTo(0, 0);
+    this.getData("time", "timeList");
+    this.getData("people", "peopleList");
+  }
+
+  getData = (collection, array) => {
+    try {
+      axios
+        .get(`${process.env.REACT_APP_HOST}/api/v1/public/${collection}`)
+        .then((res) => {
+          this.setState({ [array]: res.data });
+        });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   listState = () => {
@@ -54,11 +73,12 @@ export default class index extends Component {
     }));
   };
 
-  onFillDetail = (e) => {
+  onFillDetail = (e, id) => {
     return this.setState((prevState) => ({
       isFillDetail: !prevState.isFillDetail,
       isSelecTime: !prevState.isSelecTime,
       time: e,
+      timeId: id,
     }));
   };
 
@@ -79,7 +99,39 @@ export default class index extends Component {
   };
 
   toConfirmation = () => {
-    this.setState({ progress: "confirmation" });
+    const {
+      date,
+      peoples,
+      timeId,
+      tag,
+      firstName,
+      lastName,
+      email,
+      phone,
+      info,
+    } = this.state;
+    try {
+      axios
+        .post(`${process.env.REACT_APP_HOST}/api/v1/public/book`, {
+          date,
+          peopleId: peoples,
+          timeId: timeId,
+          tag,
+          firstName,
+          lastName,
+          email,
+          phone,
+          info,
+        })
+        .then((result) => {
+          this.setState({ progress: "confirmation" });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   toComplete = () => {
@@ -104,8 +156,6 @@ export default class index extends Component {
             {this.state.progress === "form" ? (
               <BookForm
                 {...this.state}
-                data={data}
-                timeAvailable={data.timeAvailable}
                 onSelectTime={this.onSelectTime}
                 onFillDetail={this.onFillDetail}
                 handleChange={this.handleChange}

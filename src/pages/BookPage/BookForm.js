@@ -17,7 +17,8 @@ import IcTime from "../../assets/images/ic-time.svg";
 
 export default function BookForm(props) {
   const {
-    data,
+    peopleList,
+    timeList,
     isSelecTime,
     isFillDetail,
     peoples,
@@ -29,7 +30,6 @@ export default function BookForm(props) {
     email,
     phone,
     info,
-    timeAvailable,
     formCompleted,
   } = props;
 
@@ -51,13 +51,16 @@ export default function BookForm(props) {
     if (props.handleChange) props.handleChange(e);
   };
 
-  const onFillDetail = (e) => {
-    if (props.onFillDetail) props.onFillDetail(e);
+  const onFillDetail = (e, id) => {
+    if (props.onFillDetail) props.onFillDetail(e, id);
   };
 
   const toConfirmation = () => {
     if (props.toConfirmation) props.toConfirmation();
   };
+
+  if (!peopleList) return null;
+  if (!timeList) return null;
 
   return (
     <div className="row w-100">
@@ -114,10 +117,10 @@ export default function BookForm(props) {
                   <option value="" disabled>
                     Select peoples
                   </option>
-                  {data.peoples.map((item, index) => {
+                  {peopleList.people.map((item, index) => {
                     return (
-                      <option key={`people-${index}`} value={item}>
-                        {item}
+                      <option key={`people-${index}`} value={item._id}>
+                        {item.people}
                       </option>
                     );
                   })}
@@ -147,15 +150,15 @@ export default function BookForm(props) {
       <div className={`col-12 text-center ${isSelecTime ? "" : " d-none"}`}>
         <Fade bottom delay={400}>
           <h4>Select Time :</h4>
-          {timeAvailable.map((item, index) => {
+          {timeList.time.map((item, index) => {
             return (
               <div
                 className="btn btn-outline-primary ml-2 mb-2"
                 key={`time-${index}`}
-                onClick={(e) => onFillDetail(item)}
-                value={item}
+                onClick={(e) => onFillDetail(item.timeAvailable, item._id)}
+                value={item._id}
               >
-                {item}
+                {item.timeAvailable}
               </div>
             );
           })}
