@@ -74,7 +74,7 @@ class index extends Component {
                             <i>{`by ${item.createdBy}`}</i>
                           </h6>
                           <p className="card-text text-format">
-                            {item.description}
+                            {item.description.replace(/<br\s?\/?>/g, "\n")}
                           </p>
                         </div>
                         <div className="w-100"></div>

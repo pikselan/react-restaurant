@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-// import Spinner from "./components/Spinner";
+import { connect } from "react-redux";
+import { fetchPage } from "./store/actions/page";
+
+import Spinner from "./components/Spinner";
 import LandingPage from "./pages/LandingPage";
 import MenuPage from "./pages/MenuPage";
 import GalleryPage from "./pages/GalleryPage";
@@ -13,9 +16,16 @@ import NotFoundPage from "./pages/NotFoundPage";
 import "./assets/scss/styles.scss";
 import "./assets/js/index";
 
-export default class App extends Component {
+class App extends Component {
+  componentDidMount() {
+    // get loading (must session user if available)
+    // if (!this.props.page.time) this.props.fetchPage(`/time`, "time");
+  }
+
   render() {
-    return (
+    return this.props.page.isLoading ? (
+      <Spinner />
+    ) : (
       <Router>
         <Switch>
           <Route exact path="/" component={LandingPage} />
@@ -30,3 +40,9 @@ export default class App extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  page: state.page,
+});
+
+export default connect(mapStateToProps, { fetchPage })(App);

@@ -23,11 +23,11 @@ export default function NavItem(props) {
             About
           </Button>
         </li>
-        <li className={`nav-item`}>
+        {/* <li className={`nav-item`}>
           <Button type="link" className="nav-link" href="#contact" isExternal>
             Contact
           </Button>
-        </li>
+        </li> */}
       </ul>
     </div>
   );
