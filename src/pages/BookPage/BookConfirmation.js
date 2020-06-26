@@ -16,7 +16,10 @@ export default function BookConfirmation(props) {
     email,
     phone,
     info,
+    peopleList,
   } = props;
+
+  let dataPeople = peopleList.people.find((key) => key._id === peoples);
 
   const toComplete = () => {
     if (props.toComplete) props.toComplete();
@@ -62,7 +65,7 @@ export default function BookConfirmation(props) {
             </dl>
             <dl className="row">
               <dt className="col-4">Guest</dt>
-              <dd className="col-8">{`${peoples}`}</dd>
+              <dd className="col-8">{`${dataPeople.people}`}</dd>
             </dl>
             <dl className="row">
               <dt className="col-4">Date</dt>

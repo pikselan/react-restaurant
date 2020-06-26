@@ -99,6 +99,10 @@ export default class index extends Component {
   };
 
   toConfirmation = () => {
+    this.setState({ progress: "confirmation" });
+  };
+
+  toComplete = () => {
     const {
       date,
       peoples,
@@ -124,7 +128,7 @@ export default class index extends Component {
           info,
         })
         .then((result) => {
-          this.setState({ progress: "confirmation" });
+          this.setState({ progress: "complete" });
         })
         .catch((err) => {
           console.log(err);
@@ -132,10 +136,6 @@ export default class index extends Component {
     } catch (err) {
       console.log(err);
     }
-  };
-
-  toComplete = () => {
-    this.setState({ progress: "complete" });
   };
 
   render() {
