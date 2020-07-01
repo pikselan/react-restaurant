@@ -13,8 +13,8 @@ import BookPage from "./pages/BookPage";
 import BookNow from "./pages/BookPage/BookNow";
 import NotFoundPage from "./pages/NotFoundPage";
 
-import "./assets/scss/styles.scss";
-import "./assets/js/index";
+import "./styles.scss";
+import "bootstrap/js/src/index";
 
 class App extends Component {
   componentDidMount() {

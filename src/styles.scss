@@ -1,49 +1,21 @@
-/*!
- * Bootstrap v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
-
 @import url("https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Poppins:ital,wght@0,300;0,400;0,700;1,400&display=swap");
-@import "colors";
-@import "functions";
-@import "variables";
-@import "mixins";
-@import "root";
-@import "reboot";
-@import "type";
-@import "images";
-@import "code";
-@import "grid";
-@import "tables";
-@import "forms";
-@import "buttons";
-@import "transitions";
-@import "dropdown";
-@import "button-group";
-@import "input-group";
-@import "custom-forms";
-@import "nav";
-@import "navbar";
-@import "card";
-@import "breadcrumb";
-@import "pagination";
-@import "badge";
-@import "jumbotron";
-@import "alert";
-@import "progress";
-@import "media";
-@import "list-group";
-@import "close";
-@import "toasts";
-@import "modal";
-@import "tooltip";
-@import "popover";
-@import "carousel";
-@import "spinners";
-@import "utilities";
-@import "print";
+
+// Color system
+$orange: #ffa255 !default; // custom
+$teal: #339999 !default; // custom
+
+$primary: #ff5555 !default; // custom
+$info: $teal !default; // custom
+$dark: #333 !default; // custom
+$base: #f5f2f2 !default; // custom
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "base": $base,
+  ),
+  $theme-colors
+);
 
 html {
   scroll-behavior: smooth;
@@ -308,3 +280,5 @@ nav {
   margin-top: -65vh;
   padding: 10vh 0;
 }
+
+@import "~bootstrap/scss/bootstrap.scss";
